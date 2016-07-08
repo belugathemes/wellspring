@@ -1,0 +1,33 @@
+{
+  "name": "wellspring",
+  "description": "WordPress progressive web app theme based on React.js",
+  "version": "1.0.0",
+  "homepage": "https://belugathemes.com/wellspring",
+  "author": {
+    "name": "Beluga Themes",
+    "url": "https://belugathemes.com"
+  },
+  "contributors": {
+    "name": "Kevin Wake",
+    "url": "https://kevinwake.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/belugathemes/wellspring.git"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "react-router": "^2.5.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "private": true
+}

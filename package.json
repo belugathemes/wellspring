@@ -16,7 +16,8 @@
     "url": "https://github.com/kevinwake/wellspring.git"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "webpack --watch -d",
+    "dist": "webpack -p",
   },
   "dependencies": {
     "react": "^15.2.1",

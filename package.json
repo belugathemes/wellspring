@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "webpack --watch -d",
-    "dist": "webpack -p",
+    "dist": "webpack -p"
   },
   "dependencies": {
     "react": "^15.2.1",

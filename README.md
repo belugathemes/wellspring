@@ -24,8 +24,9 @@ WordPress progressive web app theme based on React.js
 - Page transitions
 - Sidebar
 - Footer widgets
-- Post formats support
+- Post formats support (aside, image, link, quote, video)
 - Post types support (portfolio...)
+- 404 Page
 
 ### Back-end
 
@@ -56,5 +57,5 @@ Contributions, ideas, questions and other comments are all welcomed and sincerel
 
 ## License
 
-[GPL v2 license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+Licensed under [GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)  
 Copyright 2016 Radek Stangel

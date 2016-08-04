@@ -28,7 +28,6 @@ define( 'THEME_VERSION', $wellspring_theme->get( 'Version' ) );
  */
 $wellspring_includes = [
 	'inc/assets.php',
-	'inc/customizer.php',
 	'inc/setup.php',
 ];
 foreach ( $wellspring_includes as $file ) {

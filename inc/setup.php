@@ -9,6 +9,46 @@
  * @since 1.0.0
  */
 
+if ( ! function_exists( 'wellspring_clean_head' ) ) :
+/**
+ * Clean Up WordPress Head
+ *
+ * @since 1.0.0
+ */
+function wellspring_clean_head () {
+    // emoji
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+    // feed links
+    remove_action( 'wp_head', 'feed_links', 2 );
+    remove_action( 'wp_head', 'feed_links_extra', 3 );
+
+    // oEmbed
+    remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
+    remove_action( 'rest_api_init', 'wp_oembed_register_route' );
+    remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+    remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+
+    // rest api link
+    remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+    remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+
+    // really simple discovery
+    remove_action( 'wp_head', 'rsd_link' );
+
+    // shortlink
+    remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+
+    // windows live writer support
+    remove_action( 'wp_head', 'wlwmanifest_link' );
+
+    // wordpress version
+    remove_action( 'wp_head', 'wp_generator' );
+}
+endif;
+add_action('after_setup_theme', 'wellspring_clean_head');
+
 if ( ! function_exists( 'wellspring_remove_default_image_sizes' ) ) :
 /**
  * Remove default image sizes
@@ -35,9 +75,6 @@ function wellspring_setup() {
 	// Make theme available for translation
 	load_theme_textdomain( 'wellspring', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links
-	add_theme_support( 'automatic-feed-links' );
-
 	// Document title managed by WP
 	add_theme_support( 'title-tag' );
 
@@ -51,19 +88,7 @@ function wellspring_setup() {
 	// Navigation locations
 	register_nav_menus( array(
 		'main_nav' => esc_html__( 'Main Navigation', 'wellspring' ),
-		'footer_nav' => esc_html__( 'Footer Navigation', 'wellspring' ),
 	));
-
-    // Post formats
-	add_theme_support( 'post-formats', array(
-		'audio',
-		'aside',
-		'gallery',
-		'image',
-		'link',
-		'quote',
-		'video',
-	) );
 }
 endif;
 add_action( 'after_setup_theme', 'wellspring_setup' );

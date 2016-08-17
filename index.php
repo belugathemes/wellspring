@@ -1,6 +1,6 @@
 <?php
 /**
- * The Main Template
+ * Application Shell
  *
  * This is the main and only template. Everything else is rendered with React.
  *
@@ -16,7 +16,32 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<div id="app"></div>
+        <!-- Navigation -->
+        <nav class="nav">
+        	<div class="container">
+        		<!-- title -->
+        		<a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        			<?php bloginfo( 'name' ); ?>
+        		</a>
+        		<!-- menu items -->
+        		<?php
+        	    wp_nav_menu(array(
+        	        'theme_location' => 'main_nav',
+        	        'depth'          => 1,
+        			'container'		 => 0,
+        	        'menu_class'     => 'nav__menu',
+        		));
+        		?>
+        	</div>
+        </nav>
+
+		<!-- Content -->
+		<main id="content"></main>
+
+		<!-- Footer -->
+		<footer id="footer">
+            Copyright &copy; 1600&ndash;<?php echo date('Y'); ?> FriendlyCorp Inc. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
+		</footer>
 		<?php wp_footer() ?>
 	</body>
 </html>

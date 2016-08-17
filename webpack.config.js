@@ -3,13 +3,14 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   cache: true,
+  context: __dirname + "/src",
   entry: {
-    'css/appshell.css': './src/appshell/appshell.scss',
-    'css/content.css': './src/content/content.scss',
-    'js/content.js': './src/content/content.jsx',
+    'appshell.css': './appshell/appshell.scss',
+    'content.css': './content/content.scss',
+    'content.js': './content/content.jsx',
   },
   output: {
-    path: __dirname,
+    path: __dirname + '/dist',
     filename: '[name]',
   },
   module: {
@@ -17,12 +18,12 @@ module.exports = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
-        include: path.join(__dirname, 'src'),
+        include: __dirname + '/src',
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
-        include: path.join(__dirname, 'src'),
+        include: __dirname + '/src',
       },
     ]
   },

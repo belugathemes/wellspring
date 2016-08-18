@@ -47,13 +47,13 @@ add_action('after_setup_theme', 'wellspring_clean_head');
 
 if ( ! function_exists( 'wellspring_resource_hints' ) ) :
 /**
- * Resource hints for scripts & styles only
+ * Resource hints for unique scripts & styles only
  *
  * @since 1.0.0
  */
 function wellspring_resource_hints( $hints, $relation_type ) {
     if ( 'dns-prefetch' === $relation_type ) {
-        return array_diff( wp_dependencies_unique_hosts(), $hints );
+        return wp_dependencies_unique_hosts();
     }
     return $hints;
 }

@@ -1,0 +1,37 @@
+//
+//   Common Variables
+// -----------------------------------------------------------------------------
+
+@import "functions";
+
+//
+//   Colors
+// ---------------------------------------------------------
+$color-primary: #088ce2;
+$color-contrast: #ec5840;
+
+// derived
+$color-white: mix(#fff, $color-primary, 99%);
+$color-black: mix(#222, $color-primary, 92%);
+$color-black-light: mix(#444, $color-primary, 92%);
+$color-gray: mix(#888, $color-primary, 80%);
+
+//
+//   Base
+// ---------------------------------------------------------
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$base-font-weight-normal: 400;
+$base-font-weight-bold: 700;
+$base-line-height: 1.5;
+
+//
+//   Breakpoints
+// ---------------------------------------------------------
+$breakpoint-medium: 672px;
+$breakpoint-large: 828px;
+
+//
+//   Grid
+// ---------------------------------------------------------
+$grid-gutter: 2.5rem;
+$grid-gutter-third: 1.5rem;

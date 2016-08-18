@@ -1,3 +1,7 @@
+/**
+ *   Webpack Configuration
+ * =============================================================================
+ */
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 

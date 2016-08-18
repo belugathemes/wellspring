@@ -1,0 +1,26 @@
+//
+//   Button Styles
+// -----------------------------------------------------------------------------
+
+.btn {
+  align-items: center;
+  background-color: $color-primary;
+  border: 1px solid transparent;
+  border-radius: $base-radius;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  -webkit-appearance: none;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-primary, 0.9);
+    color: #fff;
+  }
+}

@@ -1,0 +1,66 @@
+//
+//   App Shell :: Base
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  // normalize: no adjustments after orientation changes in IE and iOS
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-white;
+  color: $color-black-light;
+  font-family: $base-font-family;
+  font-size: rem-calc(16);
+  font-weight: $base-font-weight-normal;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+
+  // Medium Screens
+  @media (min-width: $breakpoint-medium) {
+    font-size: rem-calc(18);
+  }
+
+  // Large Screens
+  @media (min-width: $breakpoint-large) {
+    font-size: rem-calc(20);
+  }
+}
+
+//
+//   Images
+// ---------------------------------------------------------
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  // normalize: hide the overflow in IE
+  overflow: hidden;
+}
+
+//
+//   Screen Reader Only
+// ---------------------------------------------------------
+.screen-reader {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

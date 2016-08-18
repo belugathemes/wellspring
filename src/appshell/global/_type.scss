@@ -1,0 +1,125 @@
+//
+//   Typography
+// -----------------------------------------------------------------------------
+
+//
+//   Paragraph
+// ---------------------------------------------------------
+p {
+  font-size: inherit;
+  line-height: $base-line-height;
+  margin-bottom: $base-line-height;
+}
+
+//
+//   Link
+// ---------------------------------------------------------
+a {
+  // normalize: remove gaps in links underline in iOS 8+ and Safari 8+
+  -webkit-text-decoration-skip: objects;
+
+  // normalize: remove the outline on focused links
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+}
+
+//
+//   Headings
+// ---------------------------------------------------------
+h1,
+h2,
+h3,
+h4 {
+  color: $color-black;
+  font-weight: $base-font-weight-bold;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+//
+//   Bold & Strong
+// ---------------------------------------------------------
+b,
+strong {
+  font-weight: $base-font-weight-bold;
+}
+
+//
+//   Emphasis
+// ---------------------------------------------------------
+em {
+  // font-style: italic;
+  // line-height: inherit;
+}
+
+//
+//   Small
+// ---------------------------------------------------------
+small {
+  // normalize: correct font size in all browsers
+  font-size: 80%;
+}
+
+//
+//   Subscript, Superscript
+// ---------------------------------------------------------
+sub,
+sup {
+  // normalize: prevent 'sub' and 'sup' elements from affecting the line height
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+//
+//   Code, Keyboard, Preformatted, Sample
+// ---------------------------------------------------------
+code,
+kbd,
+pre,
+samp {
+  // normalize: correct the inheritance and scaling of font size
+  font-family: monospace, monospace;
+  // normalize: correct the odd 'em' font sizing
+  font-size: 1em;
+}
+
+//
+//   Abbreviation
+// ---------------------------------------------------------
+abbr[title] {
+  // normalize: correct text decoration
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}

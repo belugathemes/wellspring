@@ -1,0 +1,22 @@
+//
+//   Footer
+// -----------------------------------------------------------------------------
+
+.footer {
+  background-color: mix(#222, $color-primary, 96%);
+  color: $color-white;
+
+  //
+  //   Medium Screens
+  // -------------------------------------------------------
+  @media (min-width: $breakpoint-medium) {
+
+  }
+
+  //
+  //   Large Screens
+  // -------------------------------------------------------
+  @media (min-width: $breakpoint-large) {
+
+  }
+}

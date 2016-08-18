@@ -1,0 +1,58 @@
+//
+//   Navigation
+// -----------------------------------------------------------------------------
+
+.nav {
+  background-color: mix(#222, $color-primary, 96%);
+  color: $color-white;
+  display: flex;
+  font-size: rem-calc(16);
+
+  // Links
+  a {
+    color: $color-white;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  // Title
+  &__title {
+    font-size: rem-calc(24);
+  }
+
+  // Menu List
+  &__menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      flex-grow: 1;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    a {
+
+    }
+  }
+
+  //
+  //   Medium Screens
+  // -------------------------------------------------------
+  @media (min-width: $breakpoint-medium) {
+
+  }
+
+  //
+  //   Large Screens
+  // -------------------------------------------------------
+  @media (min-width: $breakpoint-large) {
+
+  }
+}

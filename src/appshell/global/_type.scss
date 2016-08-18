@@ -15,6 +15,7 @@ p {
 //   Link
 // ---------------------------------------------------------
 a {
+  text-decoration: none;
   // normalize: remove gaps in links underline in iOS 8+ and Safari 8+
   -webkit-text-decoration-skip: objects;
 

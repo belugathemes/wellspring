@@ -11,7 +11,7 @@
 
 if ( ! function_exists( 'wellspring_clean_head' ) ) :
 /**
- * Clean Up WordPress Head
+ * Clean up WordPress head
  *
  * @since 1.0.0
  */
@@ -44,6 +44,21 @@ function wellspring_clean_head () {
 }
 endif;
 add_action('after_setup_theme', 'wellspring_clean_head');
+
+if ( ! function_exists( 'wellspring_resource_hints' ) ) :
+/**
+ * Resource hints for scripts & styles only
+ *
+ * @since 1.0.0
+ */
+function wellspring_resource_hints( $hints, $relation_type ) {
+    if ( 'dns-prefetch' === $relation_type ) {
+        return array_diff( wp_dependencies_unique_hosts(), $hints );
+    }
+    return $hints;
+}
+endif;
+add_filter( 'wp_resource_hints', 'wellspring_resource_hints', 10, 2 );
 
 if ( ! function_exists( 'wellspring_remove_default_image_sizes' ) ) :
 /**

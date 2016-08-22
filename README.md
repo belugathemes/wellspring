@@ -53,7 +53,7 @@ Contributions, ideas, questions and other comments are all welcomed and sincerel
 
 ## Browser Support
 
-3 latest versions of modern browsers (Chrome, Firefox, Edge, Opera); Safari 8+; IE 11; Opera Mini (latest)
+2 latest versions of modern browsers (Chrome, Firefox, Edge, Opera); Safari 9+; IE 11; Opera Mini (latest)
 
 ## License
 

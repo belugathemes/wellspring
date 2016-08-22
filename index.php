@@ -30,6 +30,7 @@
         	        'depth'          => 1,
         			'container'		 => 0,
         	        'menu_class'     => 'nav__menu',
+                    'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
         		));
         		?>
         	</div>

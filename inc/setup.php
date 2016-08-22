@@ -47,7 +47,7 @@ add_action('after_setup_theme', 'wellspring_clean_head');
 
 if ( ! function_exists( 'wellspring_resource_hints' ) ) :
 /**
- * Resource hints for unique scripts & styles only
+ * Use resource hints for unique scripts & styles only
  *
  * @since 1.0.0
  */
@@ -95,11 +95,6 @@ function wellspring_setup() {
 	add_image_size( 'full-width-image', 1080, null, false );
 	// add featured image size (width is resized, height is cropped)
 	add_image_size( 'featured-image', 1080, 360, array( false, true ) );
-
-	// Navigation locations
-	register_nav_menus( array(
-		'main_nav' => esc_html__( 'Main Navigation', 'wellspring' ),
-	));
 }
 endif;
 add_action( 'after_setup_theme', 'wellspring_setup' );

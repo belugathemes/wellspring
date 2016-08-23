@@ -7,7 +7,7 @@
 import Post from '../post/post.jsx';
 
 const Blog = () => (
-  <div>
+  <div className="blog">
     <Post />
     <Post />
   </div>

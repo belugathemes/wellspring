@@ -3,20 +3,25 @@
 // -----------------------------------------------------------------------------
 
 .footer {
-  background-color: mix(#222, $color-primary, 96%);
+  background-color: $color-primary-black;
   color: $color-white;
+  font-size: rem-calc(14);
+  margin-top: $line-height-rem;
+  padding: 0.75em 0;
 
   //
   //   Medium Screens
   // -------------------------------------------------------
   @media (min-width: $breakpoint-medium) {
-
+    font-size: rem-calc(15);
+    margin-top: $line-height-rem-medium;
   }
 
   //
   //   Large Screens
   // -------------------------------------------------------
   @media (min-width: $breakpoint-large) {
-
+    font-size: rem-calc(16);
+    margin-top: $line-height-rem-large;
   }
 }

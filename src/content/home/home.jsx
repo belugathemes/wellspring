@@ -8,7 +8,11 @@ import Button from '../../components/button/button.jsx';
 
 const Home = () => (
   <article className="home">
-    <h1>Home Page Title</h1>
+    <h1>Wellspring</h1>
+    <p>
+      WordPress theme build as a progressive web app.
+      Otimized for high&ndash;speed performance and great user experience.
+    </p>
     <Button>Home Page Action</Button>
   </article>
 )

@@ -8,14 +8,14 @@ import { Router, Route, browserHistory } from 'react-router'
 // import all content types
 import Home from './home/home.jsx';
 import Page from './page/page.jsx';
-import Posts from './posts/posts.jsx';
-import Single from './single/single.jsx';
+import Blog from './blog/blog.jsx';
+import Post from './post/post.jsx';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={Home} />
-    <Route path="blog" component={Posts} />
-    <Route path="blog/:postID" component={Single} />
+    <Route path="blog" component={Blog} />
+    <Route path="blog/:postID" component={Post} />
   </Router>,
   document.getElementById('content')
 );

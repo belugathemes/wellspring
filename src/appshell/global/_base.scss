@@ -17,12 +17,16 @@ html {
 body {
   background-color: $color-white;
   color: $color-black-light;
+  display: flex; // sticky footer
+  flex-direction: column; // sticky footer
   font-family: $base-font-family;
   font-size: rem-calc(16);
   font-weight: $base-font-weight-normal;
   line-height: $base-line-height;
   margin: 0;
+  min-height: 100vh; // sticky footer
   padding: 0;
+
 
   // Medium Screens
   @media (min-width: $breakpoint-medium) {
@@ -33,6 +37,10 @@ body {
   @media (min-width: $breakpoint-large) {
     font-size: rem-calc(20);
   }
+}
+
+#content {
+  flex: 1 0 auto; // sticky footer
 }
 
 //

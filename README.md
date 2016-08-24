@@ -41,6 +41,8 @@ WordPress progressive web app theme based on React.js
 
 ## Getting Started
 
+Before you start be sure you have the latest versions of [node, npm](https://nodejs.org/en/) and [webpack](https://webpack.github.io/docs/installation.html) installed globally on your system.
+
 1. Go to the `theme` folder of your WordPress installation `cd path-to-your-website/wp-content/themes`
 2. Clone this repository `git clone https://github.com/radekstangel/wellspring.git`
 3. Go to the Wellspring root `cd wellspring`

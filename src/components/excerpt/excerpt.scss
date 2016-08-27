@@ -1,0 +1,19 @@
+//
+//   Excerpt Styles
+// -----------------------------------------------------------------------------
+
+.excerpt {
+  border: 1px solid $color-gray;
+  border-radius: $radius;
+  margin-bottom: $line-height-rem;
+  padding: 1rem;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: rem-calc(14);
+    margin-bottom: $line-height-rem-medium;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    margin-bottom: $line-height-rem-large;
+  }
+}

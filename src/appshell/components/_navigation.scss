@@ -2,39 +2,43 @@
 //   Navigation
 // -----------------------------------------------------------------------------
 
+$nav-height: rem-calc(62);
+$nav-item-padding: rem-calc(8);
+$nav-breakpoint: $breakpoint-medium;
+
 .nav {
-  background-color: mix(#222, $color-primary, 96%);
+  // position: absolute;
+  // width: 220px;
+
+  background-color: $color-primary-black;
   color: $color-white;
-  display: flex;
   font-size: rem-calc(16);
+  margin-bottom: 1rem;
 
   // Links
   a {
     color: $color-white;
     display: block;
     text-decoration: none;
+    line-height: $nav-height;
+    padding: 0 $nav-item-padding;
 
     &:hover {
       color: #fff;
     }
   }
 
-  // Title
-  &__title {
-    font-size: rem-calc(24);
-  }
-
   // Menu List
   &__menu {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    margin: 0;
+    margin: 0 -$nav-item-padding;
     padding: 0;
 
     li {
-      flex-grow: 1;
-      padding: 0.5rem;
-      text-align: center;
+      flex: 0 1;
+      // text-align: center;
     }
 
     a {
@@ -42,17 +46,17 @@
     }
   }
 
-  //
-  //   Medium Screens
-  // -------------------------------------------------------
-  @media (min-width: $breakpoint-medium) {
-
+  // Title
+  &__title {
+    font-size: rem-calc(24);
+    font-weight: $font-weight-bold;
+    margin-right: 2rem;
   }
 
   //
-  //   Large Screens
+  //   Desktop Navigation
   // -------------------------------------------------------
-  @media (min-width: $breakpoint-large) {
-
+  @media (min-width: $nav-breakpoint) {
+    border-top: 1px solid red;
   }
 }

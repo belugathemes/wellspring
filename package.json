@@ -21,6 +21,7 @@
     "vendor": "mkdir -p dist/vendor && cp node_modules/react/dist/react.min.js node_modules/react-dom/dist/react-dom.min.js dist/vendor"
   },
   "dependencies": {
+    "jquery": "^3.1.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-router": "^2.7.0"

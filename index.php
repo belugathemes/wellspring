@@ -17,31 +17,41 @@
 	</head>
 	<body>
         <!-- Navigation -->
+        <!-- <section class="title-bar">
+            <a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    			<?php bloginfo( 'name' ); ?>
+    	    </a>
+        </section> -->
         <nav class="nav">
         	<div class="container">
-        		<!-- title -->
-        		<a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        			<?php bloginfo( 'name' ); ?>
-        		</a>
-        		<!-- menu items -->
-        		<?php
-        	    wp_nav_menu(array(
-        	        'theme_location' => 'main_nav',
-        	        'depth'          => 1,
-        			'container'		 => 0,
-        	        'menu_class'     => 'nav__menu',
-                    'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-        		));
-        		?>
+                <ul class="nav__menu">
+            		<!-- title -->
+                    <li>
+                        <a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                			<?php bloginfo( 'name' ); ?>
+            		    </a>
+                    </li>
+            		<!-- menu items -->
+            		<?php
+            	    wp_nav_menu(array(
+            	        'theme_location' => 'main_nav',
+            	        'depth'          => 1,
+            			'container'		 => 0,
+                        'items_wrap'     => '%3$s',
+            		));
+            		?>
+                </ul>
         	</div>
         </nav>
 
 		<!-- Content -->
-		<main id="content"></main>
+		<main id="content" class="container"></main>
 
 		<!-- Footer -->
-		<footer id="footer">
-            Copyright &copy; 1600&ndash;<?php echo date('Y'); ?> FriendlyCorp Inc. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
+		<footer class="footer">
+            <div class="container">
+                Copyright &copy; 1600&ndash;<?php echo date('Y'); ?> FriendlyCorp Inc. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
+            </div>
 		</footer>
 		<?php wp_footer() ?>
 	</body>

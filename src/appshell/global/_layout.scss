@@ -4,54 +4,16 @@
 
 // Container
 .container {
-  padding: 0 rem-calc(8);
+  padding: 0 rem-calc(16);
+  margin: 0 auto;
+  max-width: 960px;
+  min-width: 320px;
 
   @media (min-width: $breakpoint-medium) {
-    padding: 0 rem-calc(16);
+    padding: 0 rem-calc(36);
   }
 
   @media (min-width: $breakpoint-large) {
-    margin: 0 auto;
-    max-width: 1264px;
-    padding: 0 rem-calc(32);
-  }
-}
-
-//
-//   Grid
-// -------------------------------------------------------
-
-// Medium
-@media (min-width: $breakpoint-medium) {
-
-  .grid--half,
-  .grid--third {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -($grid-gutter/2);
-    margin-right: -($grid-gutter/2);
-  }
-
-  .grid__column {
-    flex-basis: 50%;
-    max-width: 50%;
-    padding-right: ($grid-gutter/2);
-    padding-left: ($grid-gutter/2);
-  }
-}
-
-// Large
-@media (min-width: $breakpoint-large) {
-
-  .grid--third {
-    margin-left: -($grid-gutter-third/2);
-    margin-right: -($grid-gutter-third/2);
-
-    .grid__column {
-      flex-basis: 33.3333%;
-      max-width: 33.3333%;
-      padding-right: ($grid-gutter-third/2);
-      padding-left: ($grid-gutter-third/2);
-    }
+    padding: 0 rem-calc(40);
   }
 }

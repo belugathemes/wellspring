@@ -1,0 +1,41 @@
+//
+//   Blog Page Styles
+// -----------------------------------------------------------------------------
+
+.blog {
+
+}
+
+// Medium
+@media (min-width: $breakpoint-medium) {
+
+  .blog {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($grid-gutter/2);
+    margin-right: -($grid-gutter/2);
+  }
+
+  .blog__column {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding-right: ($grid-gutter/2);
+    padding-left: ($grid-gutter/2);
+  }
+}
+
+// Large
+@media (min-width: $breakpoint-large) {
+
+  // .blog {
+  //   margin-left: -($grid-gutter-third/2);
+  //   margin-right: -($grid-gutter-third/2);
+  //
+  //   .blog__column {
+  //     flex-basis: 33.3333%;
+  //     max-width: 33.3333%;
+  //     padding-right: ($grid-gutter-third/2);
+  //     padding-left: ($grid-gutter-third/2);
+  //   }
+  // }
+}

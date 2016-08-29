@@ -3,25 +3,29 @@
  * =============================================================================
  */
 
-import $ from 'jquery';
-
-// import components
+// components
 import Excerpt from '../../components/excerpt/excerpt.jsx';
 
 class Blog extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts : []
+      posts: []
     };
   }
 
-  componentWillMount() {
-    this.serverRequest = $.get('//' + window.location.hostname + '/wp-json/wp/v2/posts', function (response) {
-      this.setState({
-        posts : response
-      });
-    }.bind(this));
+  componentDidMount() {
+    // fetch latest posts
+    fetch('//' + window.location.hostname + '/wp-json/wp/v2/posts?filter[posts_per_page]=6')
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          posts: responseData,
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      })
   }
 
   render() {
@@ -36,7 +40,7 @@ class Blog extends React.Component {
             />
           </div>
         )}
-    </div>
+      </div>
     );
   }
 }

@@ -3,7 +3,10 @@
  * =============================================================================
  */
 
-// import components
+// fetch polyfill
+import 'whatwg-fetch';
+
+// components
 import Button from '../../components/button/button.jsx';
 
 const Home = () => (

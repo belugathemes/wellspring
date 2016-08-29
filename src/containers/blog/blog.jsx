@@ -3,6 +3,9 @@
  * =============================================================================
  */
 
+// fetch polyfill
+import 'whatwg-fetch';
+
 // components
 import Excerpt from '../../components/excerpt/excerpt.jsx';
 

@@ -1,5 +1,5 @@
 /**
- *   Blog Page Content Type
+ *   Blog Page Container
  * =============================================================================
  */
 
@@ -20,7 +20,7 @@ class Blog extends React.Component {
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
-          posts: responseData,
+          posts: responseData
         });
       })
       .catch((error) => {

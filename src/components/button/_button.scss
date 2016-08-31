@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    background-color: rgba($color-primary, 0.9);
+    background-color: adjust-color($color-primary, $lightness: 5%);
     color: #fff;
   }
 }

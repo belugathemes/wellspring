@@ -10,14 +10,16 @@
 $color-primary: #088ce2;
 $color-contrast: #ec5840;
 
-// derived
-$color-white: mix(#fff, $color-primary, 96%);
-$color-black: mix(#222, $color-primary, 92%);
-$color-black-light: mix(#444, $color-primary, 92%);
-$color-gray: mix(#888, $color-primary, 80%);
-$color-gray-light: mix(#f8f8f8, $color-primary, 98%);
+// backgrounds
+$color-bg-shell: mix(#222, $color-primary, 82%);
+$color-bg-nav: adjust-color($color-bg-shell, $lightness: 8%);
+$color-bg-content: mix(#f8f8f8, $color-primary, 98%);
 
-$color-primary-black: mix($color-black, $color-primary, 86%);
+// derived grayscale
+$color-white: mix(#fff, $color-primary, 96%); // text on dark bg
+$color-black: mix(#222, $color-primary, 92%); // headlines
+$color-black-light: mix(#444, $color-primary, 92%); // text
+$color-gray: mix(#ccc, $color-primary, 92%); // excerpt border
 
 //
 //   Base

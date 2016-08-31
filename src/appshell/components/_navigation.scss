@@ -2,18 +2,106 @@
 //   Navigation
 // -----------------------------------------------------------------------------
 
-$nav-height: rem-calc(62);
+$topbar-height: rem-calc(52);
+
+$nav-height: rem-calc(42);
 $nav-item-padding: rem-calc(8);
 $nav-breakpoint: $breakpoint-medium;
 
+//
+//   Top Bar
+// -------------------------------------------------------
+.topbar {
+  background-color: $color-primary-black;
+  color: $color-white;
+  margin-bottom: $line-height-rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    color: $color-white;
+    line-height: $topbar-height;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  // topbar title
+  &__title {
+    font-size: rem-calc(26);
+    font-weight: $font-weight-bold;
+    margin-right: 1rem;
+  }
+
+  // toggle menu button
+  &__toggle {
+    background-color: transparent;
+    border: 0 none;
+    font-size: rem-calc(20);
+    color: $color-white;
+    display: inline-flex;
+    padding: 0;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &--text {
+      margin-right: 0.5rem;
+    }
+
+    &--icon {
+      transform: translate3d(0, 2px, 0);
+    }
+
+    .iconbar {
+      background-color: $color-white;
+      border-radius: $radius;
+      display: block;
+      height: 3px;
+      margin-bottom: rem-calc(5);
+      transition: transform 0.3s;
+      width: rem-calc(26);
+    }
+
+    &.close .iconbar:nth-child(1) {
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    &.close .iconbar:nth-child(2) {
+      transform: scale(0);
+    }
+
+    &.close .iconbar:nth-child(3) {
+      transform: translateY(-8px) rotate(45deg);
+    }
+  }
+
+  //
+  @media (min-width: $breakpoint-medium) {
+    margin-bottom: $line-height-rem-medium;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    margin-bottom: $line-height-rem-large;
+  }
+}
+
+//
+//   Off Canvas Navigation
+// -------------------------------------------------------
 .nav {
   // position: absolute;
   // width: 220px;
 
-  background-color: $color-primary-black;
+  background-color: adjust-color($color-primary-black, $lightness: 8%);
   color: $color-white;
   font-size: rem-calc(16);
-  margin-bottom: 1rem;
+  padding: 1rem 0;
 
   // Links
   a {
@@ -30,14 +118,13 @@ $nav-breakpoint: $breakpoint-medium;
 
   // Menu List
   &__menu {
-    display: flex;
-    flex-wrap: wrap;
     list-style-type: none;
-    margin: 0 -$nav-item-padding;
+    // margin: 0 -$nav-item-padding;
+    margin: 0;
     padding: 0;
 
     li {
-      flex: 0 1;
+      // flex: 0 1;
       // text-align: center;
     }
 
@@ -46,17 +133,10 @@ $nav-breakpoint: $breakpoint-medium;
     }
   }
 
-  // Title
-  &__title {
-    font-size: rem-calc(24);
-    font-weight: $font-weight-bold;
-    margin-right: 2rem;
-  }
-
   //
   //   Desktop Navigation
   // -------------------------------------------------------
   @media (min-width: $nav-breakpoint) {
-    border-top: 1px solid red;
+
   }
 }

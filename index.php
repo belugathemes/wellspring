@@ -16,32 +16,34 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-        <!-- Navigation -->
-        <!-- <section class="title-bar">
-            <a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-    			<?php bloginfo( 'name' ); ?>
-    	    </a>
-        </section> -->
-        <nav class="nav">
+        <!-- Top Bar -->
+        <section class="topbar">
         	<div class="container">
-                <ul class="nav__menu">
-            		<!-- title -->
-                    <li>
-                        <a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                			<?php bloginfo( 'name' ); ?>
-            		    </a>
-                    </li>
-            		<!-- menu items -->
-            		<?php
-            	    wp_nav_menu(array(
-            	        'theme_location' => 'main_nav',
-            	        'depth'          => 1,
-            			'container'		 => 0,
-                        'items_wrap'     => '%3$s',
-            		));
-            		?>
-                </ul>
-        	</div>
+                <a class="topbar__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        			<?php bloginfo( 'name' ); ?>
+        	    </a>
+                <button class="topbar__toggle" href="#">
+        			<div class="topbar__toggle--text">Menu</div>
+                    <div class="topbar__toggle--icon">
+                        <span class="iconbar"></span>
+                        <span class="iconbar"></span>
+                        <span class="iconbar"></span>
+                    </div>
+        	    </button>
+            </div>
+        </section>
+        <!-- Off-Canvas Navigation -->
+        <nav class="nav">
+            <ul class="nav__menu">
+        		<?php
+        	    wp_nav_menu(array(
+        	        'theme_location' => 'main_nav',
+        	        'depth'          => 1,
+        			'container'		 => 0,
+                    'items_wrap'     => '%3$s',
+        		));
+        		?>
+            </ul>
         </nav>
 
 		<!-- Content -->
@@ -53,6 +55,16 @@
                 Copyright &copy; 1600&ndash;<?php echo date('Y'); ?> FriendlyCorp Inc. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
             </div>
 		</footer>
+		<!-- Off Canvas Navigation Control -->
+        <script>
+            var toggle = document.querySelector(".topbar__toggle");
+            var menu = document.querySelector(".nav");
+            toggle.addEventListener('click', function(e) {
+                toggle.classList.toggle('close');
+                menu.classList.toggle('opened');
+                e.preventDefault();
+            }, false);
+        </script>
 		<?php wp_footer() ?>
 	</body>
 </html>

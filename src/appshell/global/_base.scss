@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: $color-gray-light;
+  background-color: $color-bg-content;
   color: $color-black-light;
   display: flex; // sticky footer
   flex-direction: column; // sticky footer
@@ -40,7 +40,10 @@ body {
 }
 
 #content {
+  background-color: $color-bg-content;
   flex: 1 0 auto; // sticky footer
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
 }
 
 //

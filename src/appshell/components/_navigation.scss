@@ -2,31 +2,50 @@
 //   Navigation
 // -----------------------------------------------------------------------------
 
-$topbar-height: rem-calc(52);
-
-$nav-height: rem-calc(42);
-$nav-item-padding: rem-calc(8);
 $nav-breakpoint: $breakpoint-medium;
 
+// mobile off-canvas variables
+$offcanvas-item-height: rem-calc(42);
+$offcanvas-item-padding: rem-calc(8);
+$offcanvas-width: rem-calc(220);
+
+// top bar desktop variables
+$topbar-height: rem-calc(52);
+
 //
-//   Top Bar
+//   Transitions (off-canvas reveal)
 // -------------------------------------------------------
-.topbar {
-  background-color: $color-primary-black;
-  color: $color-white;
-  margin-bottom: $line-height-rem;
+#content {
+  transition: transform 0.3s;
+  z-index: 10;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
+  &.reveal {
+    overflow-x: hidden;
+    transform: translate3d(-$offcanvas-width, 0, 0);
   }
+}
 
-  a {
+.nav {
+
+  //
+  //   Header (top bar)
+  // -------------------------------------------------------
+  &__header {
+    background-color: $color-bg-shell;
     color: $color-white;
-    line-height: $topbar-height;
 
-    &:hover {
-      color: red;
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      color: $color-white;
+      line-height: $topbar-height;
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 
@@ -41,20 +60,21 @@ $nav-breakpoint: $breakpoint-medium;
   &__toggle {
     background-color: transparent;
     border: 0 none;
-    font-size: rem-calc(20);
     color: $color-white;
+    cursor: pointer;
     display: inline-flex;
+    font-size: rem-calc(20);
     padding: 0;
 
     &:focus {
       outline: 0;
     }
 
-    &--text {
+    &__text {
       margin-right: 0.5rem;
     }
 
-    &--icon {
+    &__icon {
       transform: translate3d(0, 2px, 0);
     }
 
@@ -79,64 +99,54 @@ $nav-breakpoint: $breakpoint-medium;
     &.close .iconbar:nth-child(3) {
       transform: translateY(-8px) rotate(45deg);
     }
-  }
 
-  //
-  @media (min-width: $breakpoint-medium) {
-    margin-bottom: $line-height-rem-medium;
-  }
-
-  @media (min-width: $breakpoint-large) {
-    margin-bottom: $line-height-rem-large;
-  }
-}
-
-//
-//   Off Canvas Navigation
-// -------------------------------------------------------
-.nav {
-  // position: absolute;
-  // width: 220px;
-
-  background-color: adjust-color($color-primary-black, $lightness: 8%);
-  color: $color-white;
-  font-size: rem-calc(16);
-  padding: 1rem 0;
-
-  // Links
-  a {
-    color: $color-white;
-    display: block;
-    text-decoration: none;
-    line-height: $nav-height;
-    padding: 0 $nav-item-padding;
-
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  // Menu List
-  &__menu {
-    list-style-type: none;
-    // margin: 0 -$nav-item-padding;
-    margin: 0;
-    padding: 0;
-
-    li {
-      // flex: 0 1;
-      // text-align: center;
-    }
-
-    a {
-
+    // hide toggle on desktop
+    @media (min-width: $nav-breakpoint) {
+      display: none;
     }
   }
 
   //
-  //   Desktop Navigation
+  //   Menu (off-canvas on mobile, top bar on desktop)
   // -------------------------------------------------------
-  @media (min-width: $nav-breakpoint) {
+  &__menu {
+    background-color: $color-bg-nav;
+    bottom: $topbar-height;
+    color: $color-white;
+    font-size: rem-calc(16);
+    list-style-type: none;
+    // min-height: calc(100vh - $offcanvas-item-height); // sticky footer
+    position: absolute;
+    right: 0;
+    width: $offcanvas-width;
+    top: $topbar-height;
 
+    // Links
+    a {
+      color: $color-white;
+      display: block;
+      line-height: $offcanvas-item-height;
+      padding: 0 $offcanvas-item-padding;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    // top bar menu on desktop
+    @media (min-width: $nav-breakpoint) {
+      display: flex;
+      height: $topbar-height;
+      max-height: $topbar-height;
+      padding: 0;
+      position: static;
+      overflow: hidden;
+      width: auto;
+      z-index: 10;
+
+      a {
+        line-height: $topbar-height;
+      }
+    }
   }
 }

@@ -58,10 +58,10 @@
 		<!-- Off-Canvas Toggle Control -->
         <script>
             var toggle = document.querySelector('.nav__toggle');
-            var content = document.getElementById('content');
+            var body = document.querySelector('body');
             toggle.addEventListener('click', function(e) {
                 toggle.classList.toggle('close');
-                content.classList.toggle('reveal');
+                body.classList.toggle('nav-opened');
                 e.preventDefault();
             }, false);
         </script>

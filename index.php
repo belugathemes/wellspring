@@ -24,12 +24,14 @@
             			<?php bloginfo( 'name' ); ?>
             	    </a>
                     <button class="nav__toggle" href="#">
-            			<div class="nav__toggle__text">Menu</div>
-                        <div class="nav__toggle__icon">
-                            <span class="iconbar"></span>
-                            <span class="iconbar"></span>
-                            <span class="iconbar"></span>
-                        </div>
+                        <span>
+                			<div class="nav__toggle__text">Menu</div>
+                            <div class="nav__toggle__icon">
+                                <span class="iconbar"></span>
+                                <span class="iconbar"></span>
+                                <span class="iconbar"></span>
+                            </div>
+                        </span>
             	    </button>
                 </div>
             </header>
@@ -51,7 +53,7 @@
 		<!-- Footer -->
 		<footer class="footer">
             <div class="container">
-                Copyright &copy; 1600&ndash;<?php echo date('Y'); ?> FriendlyCorp Inc. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
+                Copyright &copy; <?php echo date('Y'); ?> Radek Stangel. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
             </div>
 		</footer>
 

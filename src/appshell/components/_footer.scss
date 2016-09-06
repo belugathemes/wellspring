@@ -6,19 +6,11 @@
   background-color: $color-bg-shell;
   color: $color-white;
   font-size: rem-calc(14);
+  line-height: 1.4;
+  z-index: 1; // above off-canvas menu
   padding: 0.75em 0;
 
-  //
-  //   Medium Screens
-  // -------------------------------------------------------
   @media (min-width: $breakpoint-medium) {
     font-size: rem-calc(15);
-  }
-
-  //
-  //   Large Screens
-  // -------------------------------------------------------
-  @media (min-width: $breakpoint-large) {
-    font-size: rem-calc(16);
   }
 }

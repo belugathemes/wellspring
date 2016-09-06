@@ -11,8 +11,8 @@ $color-primary: #088ce2;
 $color-contrast: #ec5840;
 
 // backgrounds
-$color-bg-shell: mix(#222, $color-primary, 82%);
-$color-bg-nav: adjust-color($color-bg-shell, $lightness: 8%);
+$color-bg-shell: mix(#222, $color-primary, 82%); // top bar and footer
+$color-bg-offcanvas: adjust-color($color-bg-shell, $lightness: 8%);
 $color-bg-content: mix(#f8f8f8, $color-primary, 98%);
 
 // derived grayscale

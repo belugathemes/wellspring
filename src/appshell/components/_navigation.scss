@@ -3,29 +3,21 @@
 // -----------------------------------------------------------------------------
 
 $nav-breakpoint: $breakpoint-medium;
-
-// mobile off-canvas variables
-$offcanvas-item-height: rem-calc(42);
-$offcanvas-item-padding: rem-calc(8);
-$offcanvas-width: rem-calc(220);
-
-// top bar desktop variables
-$topbar-height: rem-calc(52);
-
-//
-//   Transitions (off-canvas reveal)
-// -------------------------------------------------------
-#content {
-  transition: transform 0.3s;
-  z-index: 10;
-
-  &.reveal {
-    overflow-x: hidden;
-    transform: translate3d(-$offcanvas-width, 0, 0);
-  }
-}
+$nav-offcanvas-width: rem-calc(220);
+$nav-topbar-height: rem-calc(48);
+$nav-topbar-height-desktop: rem-calc(52);
+$nav-transition-time: 0.35s;
 
 .nav {
+
+  // all links
+  a {
+    color: $color-white;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 
   //
   //   Header (top bar)
@@ -33,38 +25,41 @@ $topbar-height: rem-calc(52);
   &__header {
     background-color: $color-bg-shell;
     color: $color-white;
+    // z-index: 10; // above everything else
 
-    .container {
-      display: flex;
+    & > .container {
+      display: inline-flex;
       justify-content: space-between;
     }
 
     a {
-      color: $color-white;
-      line-height: $topbar-height;
+      line-height: $nav-topbar-height;
 
-      &:hover {
-        color: #fff;
+      @media (min-width: $nav-breakpoint) {
+        line-height: $nav-topbar-height-desktop;
       }
     }
   }
 
-  // topbar title
+  // -- Title --
   &__title {
-    font-size: rem-calc(26);
+    font-size: rem-calc(24);
     font-weight: $font-weight-bold;
     margin-right: 1rem;
   }
 
-  // toggle menu button
+  // -- Toggle Button --
   &__toggle {
     background-color: transparent;
     border: 0 none;
     color: $color-white;
-    cursor: pointer;
-    display: inline-flex;
-    font-size: rem-calc(20);
+    cursor: context-menu;
+    font-size: rem-calc(18);
     padding: 0;
+
+    & > span {
+      display: flex; // flex doesn't work on button in firefox
+    }
 
     &:focus {
       outline: 0;
@@ -83,13 +78,13 @@ $topbar-height: rem-calc(52);
       border-radius: $radius;
       display: block;
       height: 3px;
-      margin-bottom: rem-calc(5);
+      margin-bottom: rem-calc(4);
       transition: transform 0.3s;
-      width: rem-calc(26);
+      width: rem-calc(24);
     }
 
     &.close .iconbar:nth-child(1) {
-      transform: translateY(8px) rotate(-45deg);
+      transform: translateY(7px) rotate(-45deg);
     }
 
     &.close .iconbar:nth-child(2) {
@@ -97,7 +92,7 @@ $topbar-height: rem-calc(52);
     }
 
     &.close .iconbar:nth-child(3) {
-      transform: translateY(-8px) rotate(45deg);
+      transform: translateY(-7px) rotate(45deg);
     }
 
     // hide toggle on desktop
@@ -110,43 +105,87 @@ $topbar-height: rem-calc(52);
   //   Menu (off-canvas on mobile, top bar on desktop)
   // -------------------------------------------------------
   &__menu {
-    background-color: $color-bg-nav;
-    bottom: $topbar-height;
+    background-color: $color-bg-offcanvas;
+    bottom: 0;
     color: $color-white;
     font-size: rem-calc(16);
     list-style-type: none;
-    // min-height: calc(100vh - $offcanvas-item-height); // sticky footer
-    position: absolute;
+    margin: 0;
+    overflow-y: scroll;
+    padding: rem-calc(60) 0;
+    height: 100vh;
+    position: fixed;
     right: 0;
-    width: $offcanvas-width;
-    top: $topbar-height;
+    top: $nav-topbar-height;
+    width: $nav-offcanvas-width;
 
     // Links
     a {
       color: $color-white;
       display: block;
-      line-height: $offcanvas-item-height;
-      padding: 0 $offcanvas-item-padding;
+      line-height: rem-calc(42);
+      padding: 0 1rem;
 
       &:hover {
+        background-color: darken($color-bg-offcanvas, 5%);
         color: #fff;
       }
+    }
+
+    .active a {
+      background-color: darken($color-bg-offcanvas, 5%);
     }
 
     // top bar menu on desktop
     @media (min-width: $nav-breakpoint) {
       display: flex;
-      height: $topbar-height;
-      max-height: $topbar-height;
+      height: $nav-topbar-height;
+      max-height: $nav-topbar-height;
       padding: 0;
       position: static;
       overflow: hidden;
       width: auto;
-      z-index: 10;
+
 
       a {
-        line-height: $topbar-height;
+        line-height: $nav-topbar-height;
       }
+    }
+  }
+}
+
+//
+//   Transitions (reveal off-canvas menu)
+// -------------------------------------------------------
+#content {
+  transition: transform $nav-transition-time;
+
+  // the content overlay
+  &:after {
+  	background-color: $color-black;
+  	content: "";
+  	height: 0;
+  	left: 0;
+  	opacity: 0;
+  	position: absolute;
+  	top: 0;
+  	width: 0;
+  	transition: opacity $nav-transition-time, width 0.1s $nav-transition-time, height 0.1s $nav-transition-time;
+  }
+}
+
+.nav-opened {
+  overflow: hidden;
+
+  #content {
+    transform: translate3d(-$nav-offcanvas-width, 0, 0);
+
+    // darken the content when menu is opened
+    &:after {
+    	height: 100%;
+    	opacity: 0.4;
+    	transition: opacity $nav-transition-time;
+    	width: 100%;
     }
   }
 }

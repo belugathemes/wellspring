@@ -2,7 +2,7 @@
 /**
  * Application Shell
  *
- * This is the main and only template. Everything else is rendered with React.
+ * This is the main and only template. Everything else is rendered by React.
  *
  * @package WordPress
  * @subpackage Wellspring

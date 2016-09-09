@@ -2,11 +2,21 @@
 //   Navigation
 // -----------------------------------------------------------------------------
 
+// navigation breakpoint
 $nav-breakpoint: $breakpoint-medium;
-$nav-offcanvas-width: rem-calc(220);
-$nav-topbar-height: rem-calc(48);
-$nav-topbar-height-desktop: rem-calc(52);
+
+// open/close menu transition time
 $nav-transition-time: 0.35s;
+
+// off-canvas menu
+$nav-offcanvas-bg: mix(#333, $color-primary, 67%);
+$nav-offcanvas-bg-active: darken($nav-offcanvas-bg, 5%); // active and hover
+$nav-offcanvas-border: 1px solid rgba(#fff, 0.15);
+$nav-offcanvas-width: rem-calc(220);
+
+// top bar
+$nav-topbar-height: rem-calc(50);
+// $nav-topbar-height-desktop: rem-calc(52);
 
 .nav {
 
@@ -25,7 +35,8 @@ $nav-transition-time: 0.35s;
   &__header {
     background-color: $color-bg-shell;
     color: $color-white;
-    // z-index: 10; // above everything else
+    // position: relative;
+    // z-index: 2; // above everything else
 
     & > .container {
       display: inline-flex;
@@ -36,14 +47,14 @@ $nav-transition-time: 0.35s;
       line-height: $nav-topbar-height;
 
       @media (min-width: $nav-breakpoint) {
-        line-height: $nav-topbar-height-desktop;
+        // line-height: $nav-topbar-height-desktop;
       }
     }
   }
 
   // -- Title --
   &__title {
-    font-size: rem-calc(24);
+    font-size: rem-calc(25);
     font-weight: $font-weight-bold;
     margin-right: 1rem;
   }
@@ -105,14 +116,14 @@ $nav-transition-time: 0.35s;
   //   Menu (off-canvas on mobile, top bar on desktop)
   // -------------------------------------------------------
   &__menu {
-    background-color: $color-bg-offcanvas;
+    background-color: $nav-offcanvas-bg;
     bottom: 0;
     color: $color-white;
     font-size: rem-calc(16);
     list-style-type: none;
     margin: 0;
     overflow-y: scroll;
-    padding: rem-calc(60) 0;
+    padding: 0 0 3rem;
     height: 100vh;
     position: fixed;
     right: 0;
@@ -121,19 +132,27 @@ $nav-transition-time: 0.35s;
 
     // Links
     a {
+      border-bottom: $nav-offcanvas-border;
       color: $color-white;
       display: block;
-      line-height: rem-calc(42);
+      font-size: rem-calc(18);
+      line-height: $nav-topbar-height;
       padding: 0 1rem;
+      text-align: center;
 
       &:hover {
-        background-color: darken($color-bg-offcanvas, 5%);
+        background-color: $nav-offcanvas-bg-active;
         color: #fff;
       }
     }
 
+    li:first-child a {
+      border-top: $nav-offcanvas-border;
+    }
+
     .active a {
-      background-color: darken($color-bg-offcanvas, 5%);
+      background-color: $nav-offcanvas-bg-active;
+      color: #fff;
     }
 
     // top bar menu on desktop

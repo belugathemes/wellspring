@@ -18,8 +18,8 @@
 	<body>
         <!-- Navigation -->
         <nav class="nav">
-            <header class="nav__header">
-            	<div class="container">
+        	<div class="container">
+	            <header class="nav__header">
                     <a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             			<?php bloginfo( 'name' ); ?>
             	    </a>
@@ -33,18 +33,18 @@
                             </div>
                         </span>
             	    </button>
-                </div>
-            </header>
-            <ul class="nav__menu">
-        		<?php
-        	    wp_nav_menu(array(
-        	        'theme_location' => 'main_nav',
-        	        'depth'          => 1,
-        			'container'		 => 0,
-                    'items_wrap'     => '%3$s',
-        		));
-        		?>
-            </ul>
+	            </header>
+	            <ul class="nav__menu">
+	        		<?php
+	        	    wp_nav_menu(array(
+	        	        'theme_location' => 'main_nav',
+	        	        'depth'          => 1,
+	        			'container'		 => 0,
+	                    'items_wrap'     => '%3$s',
+	        		));
+	        		?>
+	            </ul>
+            </div>
         </nav>
 
 		<!-- Content -->

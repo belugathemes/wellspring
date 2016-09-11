@@ -18,14 +18,34 @@ $nav-offcanvas-width: rem-calc(220);
 $nav-topbar-height: rem-calc(50);
 // $nav-topbar-height-desktop: rem-calc(52);
 
+//
+//   Navigation Styles
+// -------------------------------------------------------
 .nav {
+  background: $color-bg-shell; // mainly for desktop
 
   // all links
   a {
     color: $color-white;
+    display: block;
+    font-size: rem-calc(18);
+    line-height: $nav-topbar-height;
 
     &:hover {
       color: #fff;
+    }
+
+    @media (min-width: $nav-breakpoint) {
+      font-size: rem-calc(16);
+    }
+  }
+
+  // top bar on desktop
+  @media (min-width: $nav-breakpoint) {
+
+    & > .container {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -33,27 +53,14 @@ $nav-topbar-height: rem-calc(50);
   //   Header (top bar)
   // -------------------------------------------------------
   &__header {
-    background-color: $color-bg-shell;
+    background: $color-bg-shell;
     color: $color-white;
-    // position: relative;
-    // z-index: 2; // above everything else
-
-    & > .container {
-      display: inline-flex;
-      justify-content: space-between;
-    }
-
-    a {
-      line-height: $nav-topbar-height;
-
-      @media (min-width: $nav-breakpoint) {
-        // line-height: $nav-topbar-height-desktop;
-      }
-    }
+    display: flex;
+    justify-content: space-between;
   }
 
   // -- Title --
-  &__title {
+  & &__title { // inside .nav to solve specificity
     font-size: rem-calc(25);
     font-weight: $font-weight-bold;
     margin-right: 1rem;
@@ -61,15 +68,15 @@ $nav-topbar-height: rem-calc(50);
 
   // -- Toggle Button --
   &__toggle {
-    background-color: transparent;
-    border: 0 none;
+    background: transparent;
+    border: 0;
     color: $color-white;
     cursor: context-menu;
     font-size: rem-calc(18);
     padding: 0;
 
     & > span {
-      display: flex; // flex doesn't work on button in firefox
+      display: flex; // flex doesn't work on button in firefox so we use <span>
     }
 
     &:focus {
@@ -85,7 +92,7 @@ $nav-topbar-height: rem-calc(50);
     }
 
     .iconbar {
-      background-color: $color-white;
+      background: $color-white;
       border-radius: $radius;
       display: block;
       height: 3px;
@@ -116,13 +123,13 @@ $nav-topbar-height: rem-calc(50);
   //   Menu (off-canvas on mobile, top bar on desktop)
   // -------------------------------------------------------
   &__menu {
-    background-color: $nav-offcanvas-bg;
+    background: $nav-offcanvas-bg;
     bottom: 0;
     color: $color-white;
     font-size: rem-calc(16);
     list-style-type: none;
     margin: 0;
-    overflow-y: scroll;
+    overflow: scroll;
     padding: 0 0 3rem;
     height: 100vh;
     position: fixed;
@@ -134,14 +141,11 @@ $nav-topbar-height: rem-calc(50);
     a {
       border-bottom: $nav-offcanvas-border;
       color: $color-white;
-      display: block;
-      font-size: rem-calc(18);
-      line-height: $nav-topbar-height;
       padding: 0 1rem;
       text-align: center;
 
       &:hover {
-        background-color: $nav-offcanvas-bg-active;
+        background: $nav-offcanvas-bg-active;
         color: #fff;
       }
     }
@@ -151,24 +155,18 @@ $nav-topbar-height: rem-calc(50);
     }
 
     .active a {
-      background-color: $nav-offcanvas-bg-active;
+      background: $nav-offcanvas-bg-active;
       color: #fff;
     }
 
-    // top bar menu on desktop
+    // Menu items on desktop
     @media (min-width: $nav-breakpoint) {
+      background: $color-bg-shell;
       display: flex;
       height: $nav-topbar-height;
-      max-height: $nav-topbar-height;
       padding: 0;
       position: static;
-      overflow: hidden;
       width: auto;
-
-
-      a {
-        line-height: $nav-topbar-height;
-      }
     }
   }
 }
@@ -181,7 +179,7 @@ $nav-topbar-height: rem-calc(50);
 
   // the content overlay
   &:after {
-  	background-color: $color-black;
+  	background: $color-black;
   	content: "";
   	height: 0;
   	left: 0;

@@ -2,12 +2,8 @@
   "name": "wellspring",
   "description": "WordPress progressive web app theme based on React.js",
   "version": "1.0.0",
-  "homepage": "https://belugathemes.com/wellspring",
+  "homepage": "https://radekstangel.com/wellspring",
   "author": {
-    "name": "Beluga Themes",
-    "url": "https://belugathemes.com"
-  },
-  "contributors": {
     "name": "Radek Stangel",
     "url": "https://radekstangel.com"
   },

@@ -57,6 +57,8 @@ $nav-topbar-height: rem-calc(50);
     color: $color-white;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 2; // above everything else
   }
 
   // -- Title --
@@ -72,15 +74,19 @@ $nav-topbar-height: rem-calc(50);
     border: 0;
     color: $color-white;
     cursor: context-menu;
-    font-size: rem-calc(18);
+    font-size: rem-calc(16);
     padding: 0;
-
-    & > span {
-      display: flex; // flex doesn't work on button in firefox so we use <span>
-    }
 
     &:focus {
       outline: 0;
+    }
+
+    // flex doesn't work on button in firefox so we use <span>
+    & > span {
+      border: 1px solid rgba(#fff, 0.55);
+      border-radius: $radius;
+      display: flex;
+      padding: rem-calc(7 8);
     }
 
     &__text {
@@ -95,14 +101,15 @@ $nav-topbar-height: rem-calc(50);
       background: $color-white;
       border-radius: $radius;
       display: block;
-      height: 3px;
+      height: 2px;
       margin-bottom: rem-calc(4);
       transition: transform 0.3s;
-      width: rem-calc(24);
+      width: rem-calc(22);
     }
 
+    // transition hamburger icon to cancel button
     &.close .iconbar:nth-child(1) {
-      transform: translateY(7px) rotate(-45deg);
+      transform: translateY(6px) rotate(-45deg);
     }
 
     &.close .iconbar:nth-child(2) {
@@ -110,7 +117,7 @@ $nav-topbar-height: rem-calc(50);
     }
 
     &.close .iconbar:nth-child(3) {
-      transform: translateY(-7px) rotate(45deg);
+      transform: translateY(-6px) rotate(45deg);
     }
 
     // hide toggle on desktop
@@ -131,8 +138,8 @@ $nav-topbar-height: rem-calc(50);
     margin: 0;
     overflow: scroll;
     padding: 0 0 3rem;
-    height: 100vh;
-    position: fixed;
+    height: calc(100vh - #{$nav-topbar-height}); // for safari
+    position: absolute;
     right: 0;
     top: $nav-topbar-height;
     width: $nav-offcanvas-width;
@@ -197,7 +204,7 @@ $nav-topbar-height: rem-calc(50);
   #content {
     transform: translate3d(-$nav-offcanvas-width, 0, 0);
 
-    // darken the content when menu is opened
+    // darken the content when the menu is opened
     &:after {
     	height: 100%;
     	opacity: 0.4;

@@ -28,13 +28,15 @@ class Page extends React.Component {
       })
       .catch((error) => {
         console.error(error);
-      })
+      });
+    // for test only
+    console.log('Title: ' + this.state.page);
   }
 
   render() {
     return (
       <div>
-        <h2>Direct: {this.state.page.title}</h2>
+        {/* <h2>Direct: {this.state.page.title}</h2> */}
         {this.state.page.map((current) =>
           <article className="page">
             <h1 className="page__title" dangerouslySetInnerHTML={{__html: current.title.rendered}} />

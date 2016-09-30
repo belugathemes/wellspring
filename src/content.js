@@ -6,10 +6,10 @@
 import { Router, Route, browserHistory } from 'react-router'
 
 // import all content types
-import Home from './containers/home/home.jsx';
-import Page from './containers/page/page.jsx';
-import Blog from './containers/blog/blog.jsx';
-import Post from './containers/post/post.jsx';
+import Home from './containers/home/home.js';
+import Page from './containers/page/page.js';
+import Blog from './containers/blog/blog.js';
+import Post from './containers/post/post.js';
 
 ReactDOM.render(
   <Router history={browserHistory}>

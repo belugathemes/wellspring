@@ -7,7 +7,7 @@
 import 'whatwg-fetch';
 
 // components
-// import Button from '../../components/button/button.jsx';
+// import Button from '../../components/button/button.js';
 
 class Page extends React.Component {
   constructor(props) {
@@ -29,8 +29,6 @@ class Page extends React.Component {
       .catch((error) => {
         console.error(error);
       });
-    // for test only
-    console.log('Title: ' + this.state.page);
   }
 
   render() {

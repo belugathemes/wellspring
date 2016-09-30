@@ -7,7 +7,7 @@
 import 'whatwg-fetch';
 
 // components
-import Excerpt from '../../components/excerpt/excerpt.jsx';
+import Excerpt from '../../components/excerpt/excerpt.js';
 
 class Blog extends React.Component {
   constructor() {
@@ -28,7 +28,8 @@ class Blog extends React.Component {
       })
       .catch((error) => {
         console.error(error);
-      })
+      });
+
   }
 
   render() {

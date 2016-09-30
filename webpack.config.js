@@ -11,7 +11,7 @@ module.exports = {
   entry: {
     'appshell.css': './appshell/appshell.scss',
     'content.css': './content.scss',
-    'content.js': './content.jsx',
+    'content.js': './content.js',
   },
   output: {
     path: __dirname + '/dist',
@@ -20,7 +20,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /(\.jsx|\.js)$/,
+        test: /(\.js|\.jsx)$/,
         loader: 'babel-loader',
         include: __dirname + '/src',
       },

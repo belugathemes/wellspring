@@ -7,7 +7,7 @@
 import 'whatwg-fetch';
 
 // components
-import Button from '../../components/button/button.jsx';
+import Button from '../../components/button/button.js';
 
 class Post extends React.Component {
   constructor(props) {

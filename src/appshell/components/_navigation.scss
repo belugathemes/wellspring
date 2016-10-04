@@ -10,13 +10,12 @@ $nav-transition-time: 0.35s;
 
 // off-canvas menu
 $nav-offcanvas-bg: mix(#333, $color-primary, 67%);
-$nav-offcanvas-bg-active: darken($nav-offcanvas-bg, 5%); // active and hover
 $nav-offcanvas-border: 1px solid rgba(#fff, 0.15);
 $nav-offcanvas-width: rem-calc(220);
 
 // top bar
 $nav-topbar-height: rem-calc(50);
-// $nav-topbar-height-desktop: rem-calc(52);
+$nav-topbar-border: 1px solid rgba(#fff, 0.2);
 
 //
 //   Navigation Styles
@@ -65,7 +64,7 @@ $nav-topbar-height: rem-calc(50);
   & &__title { // inside .nav to solve specificity
     font-size: rem-calc(25);
     font-weight: $font-weight-bold;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   // -- Toggle Button --
@@ -127,7 +126,7 @@ $nav-topbar-height: rem-calc(50);
   }
 
   //
-  //   Menu (off-canvas on mobile, top bar on desktop)
+  //   Menu (off-canvas mobile first, top bar on desktop)
   // -------------------------------------------------------
   &__menu {
     background: $nav-offcanvas-bg;
@@ -144,29 +143,7 @@ $nav-topbar-height: rem-calc(50);
     top: $nav-topbar-height;
     width: $nav-offcanvas-width;
 
-    // Links
-    a {
-      border-bottom: $nav-offcanvas-border;
-      color: $color-white;
-      padding: 0 1rem;
-      text-align: center;
-
-      &:hover {
-        background: $nav-offcanvas-bg-active;
-        color: #fff;
-      }
-    }
-
-    li:first-child a {
-      border-top: $nav-offcanvas-border;
-    }
-
-    .active a {
-      background: $nav-offcanvas-bg-active;
-      color: #fff;
-    }
-
-    // Menu items on desktop
+    // menu - top bar on desktop
     @media (min-width: $nav-breakpoint) {
       background: $color-bg-shell;
       display: flex;
@@ -174,6 +151,47 @@ $nav-topbar-height: rem-calc(50);
       padding: 0;
       position: static;
       width: auto;
+    }
+
+    // Menu Links
+    a {
+      border-bottom: $nav-offcanvas-border;
+      color: $color-white;
+      padding: 0 1.25rem;
+      text-align: center;
+
+      // menu links - top bar on desktop
+      @media (min-width: $nav-breakpoint) {
+        border-bottom: 0; // remove mobile border
+        border-right: $nav-topbar-border;
+      }
+
+      // menu links - large desktop
+      @media (min-width: $breakpoint-large) {
+        padding: 0 2.25rem;
+      }
+    }
+
+    // Active and Hover Links
+    a:hover {
+      background: darken($nav-offcanvas-bg, 5%);
+      color: #fff;
+
+      // active and hover links - top bar on desktop
+      @media (min-width: $nav-breakpoint) {
+        background: lighten($color-bg-shell, 5%);
+      }
+    }
+
+    // First Menu Link
+    li:first-child a {
+      border-top: $nav-offcanvas-border;
+
+      // first menu link - top bar on desktop
+      @media (min-width: $nav-breakpoint) {
+        border-left: $nav-topbar-border;
+        border-top: 0; // remove mobile border
+      }
     }
   }
 }

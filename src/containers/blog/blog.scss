@@ -2,40 +2,40 @@
 //   Blog Page Styles
 // -----------------------------------------------------------------------------
 
-.blog {
+// grid gutters
+$grid-gutter-medium: rem-calc(22);
+$grid-gutter-large: rem-calc(18);
+
+.blog__column {
+  margin-bottom: $line-height-rem;
+  width: 100%;
+}
+
+// Small
+@media (min-width: $breakpoint-small) {
+
+  // masonry-like grid
+  .blog {
+    column-count: 2;
+    column-gap: $grid-gutter-medium;
+
+    &__column {
+      display: inline-block; // workaroud till 'break-inside: avoid' support
+      margin-bottom: $grid-gutter-medium;
+    }
+  }
 
 }
 
-// Medium
-@media (min-width: $breakpoint-medium) {
+// XLarge
+@media (min-width: $breakpoint-xlarge) {
 
   .blog {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -($grid-gutter/2);
-    margin-right: -($grid-gutter/2);
+    column-count: 3;
+    column-gap: $grid-gutter-large;
+
+    &__column {
+      margin-bottom: $grid-gutter-large;
+    }
   }
-
-  .blog__column {
-    flex-basis: 50%;
-    max-width: 50%;
-    padding-right: ($grid-gutter/2);
-    padding-left: ($grid-gutter/2);
-  }
-}
-
-// Large
-@media (min-width: $breakpoint-large) {
-
-  // .blog {
-  //   margin-left: -($grid-gutter-third/2);
-  //   margin-right: -($grid-gutter-third/2);
-  //
-  //   .blog__column {
-  //     flex-basis: 33.3333%;
-  //     max-width: 33.3333%;
-  //     padding-right: ($grid-gutter-third/2);
-  //     padding-left: ($grid-gutter-third/2);
-  //   }
-  // }
 }

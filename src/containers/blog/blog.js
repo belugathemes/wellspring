@@ -40,6 +40,7 @@ class Blog extends React.Component {
             <Excerpt
               key={post.id}
               title={post.title.rendered}
+              url={post.link}
               excerpt={post.excerpt.rendered}
             />
           </div>

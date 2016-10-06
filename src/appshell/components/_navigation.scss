@@ -168,18 +168,19 @@ $nav-topbar-border: 1px solid rgba(#fff, 0.2);
 
       // menu links - large desktop
       @media (min-width: $breakpoint-large) {
-        padding: 0 2.25rem;
+        padding: 0 2rem;
       }
     }
 
-    // Active and Hover Links
+    // Hover Links
+    .active a,
     a:hover {
       background: darken($nav-offcanvas-bg, 5%);
       color: #fff;
 
       // active and hover links - top bar on desktop
       @media (min-width: $nav-breakpoint) {
-        background: lighten($color-bg-shell, 5%);
+        background: lighten($color-bg-shell, 3%);
       }
     }
 

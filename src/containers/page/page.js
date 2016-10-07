@@ -37,7 +37,7 @@ class Page extends React.Component {
         {this.state.page.map((current) =>
           <article className="page">
             <h1 className="page__title" dangerouslySetInnerHTML={{__html: current.title.rendered}} />
-            <section className="page__entry" dangerouslySetInnerHTML={{__html: current.excerpt.rendered}} />
+            <section className="page__entry" dangerouslySetInnerHTML={{__html: current.content.rendered}} />
           </article>
         )}
       </div>

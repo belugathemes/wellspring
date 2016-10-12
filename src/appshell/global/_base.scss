@@ -28,13 +28,15 @@ body {
   padding: 0;
   text-rendering: optimizeLegibility;
 
+  // responsive typography
+  @media (min-width: $breakpoint-small) {
+    font-size: $font-size-small;
+  }
 
-  // Medium Screens
   @media (min-width: $breakpoint-medium) {
     font-size: $font-size-medium;
   }
 
-  // Large Screens
   @media (min-width: $breakpoint-large) {
     font-size: $font-size-large;
   }

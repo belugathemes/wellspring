@@ -5,13 +5,13 @@
 .excerpt {
   border: 1px solid $color-gray;
   border-radius: $radius;
-  padding: 1rem;
+  padding: 1em;
 
   @media (min-width: $breakpoint-medium) {
-    font-size: rem-calc(14);
+    font-size: rem-calc(15);
   }
 
   @media (min-width: $breakpoint-large) {
-
+    font-size: rem-calc(16);
   }
 }

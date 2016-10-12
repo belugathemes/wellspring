@@ -28,28 +28,22 @@ $font-family-light: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Ne
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 $font-size: rem-calc(16);
-$font-size-medium: rem-calc(18);
-$font-size-large: rem-calc(20);
+$font-size-small: rem-calc(18);
+$font-size-medium: rem-calc(20);
+$font-size-large: rem-calc(22);
 
 $font-weight: 400;
 $font-weight-light: 300;
 $font-weight-bold: 700;
 
 $line-height: 1.5;
-$line-height-rem: $line-height * $font-size;
-$line-height-rem-medium: $line-height * $font-size-medium;
-$line-height-rem-large: $line-height * $font-size-large;
+$line-height-em: $line-height * 1em;
 
 $radius: 3px;
 
 //
 //   Breakpoints
 // ---------------------------------------------------------
-$breakpoint-medium: 672px;
-$breakpoint-large: 828px;
-
-//
-//   Grid
-// ---------------------------------------------------------
-$grid-gutter: 2.5rem;
-$grid-gutter-third: 1.5rem;
+$breakpoint-small: em-calc(545);
+$breakpoint-medium: em-calc(685);
+$breakpoint-large: em-calc(837);

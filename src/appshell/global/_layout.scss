@@ -4,17 +4,13 @@
 
 // Container
 .container {
-  padding: 0 rem-calc(16);
+  padding: 0 1em;
   margin: 0 auto;
-  max-width: rem-calc(960);
+  max-width: rem-calc(968);
   min-width: rem-calc(320);
   width: 100%;
 
-  @media (min-width: $breakpoint-medium) {
-    padding: 0 rem-calc(36);
-  }
-
-  @media (min-width: $breakpoint-large) {
-    padding: 0 rem-calc(40);
+  @media (min-width: $breakpoint-small) {
+    padding: 0 2em;
   }
 }

@@ -180,7 +180,7 @@ $nav-topbar-border: 1px solid rgba(#fff, 0.2);
 
       // active and hover links - top bar on desktop
       @media (min-width: $nav-breakpoint) {
-        background: lighten($color-bg-shell, 3%);
+        background: darken($color-bg-shell, 3%);
       }
     }
 

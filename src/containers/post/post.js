@@ -13,7 +13,7 @@ class Post extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      post: []
+      data: []
     };
   }
 
@@ -23,7 +23,7 @@ class Post extends React.Component {
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
-          post: responseData
+          data: responseData
         });
       })
       .catch((error) => {
@@ -34,10 +34,10 @@ class Post extends React.Component {
   render() {
     return (
       <div>
-        {this.state.post.map((current) =>
+        {this.state.data.map((post) =>
           <article className="post">
-            <h1 className="post__title" dangerouslySetInnerHTML={{__html: current.title.rendered}} />
-            <section className="post__entry" dangerouslySetInnerHTML={{__html: current.content.rendered}} />
+            <h1 className="post__title" dangerouslySetInnerHTML={{__html: post.title.rendered}} />
+            <section className="post__entry" dangerouslySetInnerHTML={{__html: post.content.rendered}} />
           </article>
         )}
         <section className="post__nav">

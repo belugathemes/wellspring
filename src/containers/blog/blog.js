@@ -13,7 +13,7 @@ class Blog extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      data: []
     };
   }
 
@@ -23,7 +23,7 @@ class Blog extends React.Component {
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
-          posts: responseData
+          data: responseData
         });
       })
       .catch((error) => {
@@ -35,7 +35,7 @@ class Blog extends React.Component {
   render() {
     return (
       <div className="blog">
-        {this.state.posts.map((post) =>
+        {this.state.data.map((post) =>
           <div className="blog__column">
             <Excerpt
               key={post.id}

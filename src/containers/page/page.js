@@ -13,7 +13,7 @@ class Page extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      page: []
+      data: []
     };
   }
 
@@ -23,7 +23,7 @@ class Page extends React.Component {
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
-          page: responseData
+          data: responseData
         });
       })
       .catch((error) => {
@@ -34,10 +34,10 @@ class Page extends React.Component {
   render() {
     return (
       <div>
-        {this.state.page.map((current) =>
+        {this.state.data.map((page) =>
           <article className="page">
-            <h1 className="page__title" dangerouslySetInnerHTML={{__html: current.title.rendered}} />
-            <section className="page__entry" dangerouslySetInnerHTML={{__html: current.content.rendered}} />
+            <h1 className="page__title" dangerouslySetInnerHTML={{__html: page.title.rendered}} />
+            <section className="page__entry" dangerouslySetInnerHTML={{__html: page.content.rendered}} />
           </article>
         )}
       </div>

@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-light;
   font-weight: $font-weight-light;
   line-height: 1.2;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -48,14 +48,6 @@ h5 {
 
 h6 {
   font-size: 0.75em;
-}
-
-//
-//   Leading Paragraph
-// ---------------------------------------------------------
-.lead {
-  font-size: 1.25em;
-  line-height: $line-height + 0.1;
 }
 
 //
@@ -147,8 +139,9 @@ code,
 kbd,
 pre,
 samp {
-  background: mix(#e6e6e6, $color-primary, 95%);
+  background: mix(#eaeaea, $color-primary, 96%);
   border-radius: $radius;
+  color: $color-black;
   font-family: $font-family-monospace;
   // normalize: correct the odd 'em' font sizing
   font-size: 1em;
@@ -156,6 +149,7 @@ samp {
 }
 
 pre {
+  font-size: 0.875em;
   padding: 0.5em 1em;
 }
 
@@ -166,4 +160,21 @@ abbr[title] {
   // normalize: correct text decoration
   text-decoration: underline;
   text-decoration: underline dotted;
+}
+
+//
+//   Leading Paragraph
+// ---------------------------------------------------------
+.lead {
+  font-size: 1.25em;
+  line-height: $line-height + 0.1;
+
+  &:first-letter {
+    float: left;
+    font-size: em-calc(49);
+    font-weight: $font-weight-bold;
+    line-height: 1em;
+    margin-right: 0.125em;
+    margin-top: rem-calc(3);
+  }
 }

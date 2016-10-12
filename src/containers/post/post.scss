@@ -3,13 +3,5 @@
 // -----------------------------------------------------------------------------
 
 .post {
-  margin-bottom: $line-height-rem;
 
-  @media (min-width: $breakpoint-medium) {
-    margin-bottom: $line-height-rem-medium;
-  }
-
-  @media (min-width: $breakpoint-large) {
-    margin-bottom: $line-height-rem-large;
-  }
 }

@@ -2,40 +2,30 @@
 //   Blog Page Styles
 // -----------------------------------------------------------------------------
 
-// grid gutters
-$grid-gutter-medium: rem-calc(22);
-$grid-gutter-large: rem-calc(18);
+// grid gutter
+$grid-gutter: 1em;
 
-.blog__column {
-  margin-bottom: $line-height-rem;
-  width: 100%;
+.blog {
+  margin: -($grid-gutter/2);
+
+  &__column {
+    padding: ($grid-gutter/2);
+    width: 100%;
+  }
 }
 
 // Small
-@media (min-width: $breakpoint-small) {
+@media (min-width: $breakpoint-medium) {
 
-  // masonry-like grid
+   // 2-column grid
   .blog {
-    column-count: 2;
-    column-gap: $grid-gutter-medium;
+    display: flex;
+    flex-wrap: wrap;
 
     &__column {
-      display: inline-block; // workaroud till 'break-inside: avoid' support
-      margin-bottom: $grid-gutter-medium;
+      flex-basis: 50%;
+      max-width: 50%;
     }
   }
 
-}
-
-// XLarge
-@media (min-width: $breakpoint-xlarge) {
-
-  .blog {
-    column-count: 3;
-    column-gap: $grid-gutter-large;
-
-    &__column {
-      margin-bottom: $grid-gutter-large;
-    }
-  }
 }

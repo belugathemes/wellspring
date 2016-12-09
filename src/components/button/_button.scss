@@ -20,7 +20,17 @@
 
   &:hover,
   &:focus {
-    background: adjust-color($color-primary, $lightness: 5%);
+    background: adjust-color($color-primary, $lightness: -5%);
     color: #fff;
+  }
+
+  // Contras Button
+  &--contrast {
+    background: $color-contrast;
+
+    &:hover,
+    &:focus {
+      background: adjust-color($color-contrast, $lightness: -5%);
+    }
   }
 }

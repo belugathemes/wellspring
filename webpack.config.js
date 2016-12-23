@@ -18,7 +18,7 @@ module.exports = {
     filename: '[name]',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /(\.js|\.jsx)$/,
         loader: 'babel-loader',
@@ -26,7 +26,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader: "css-loader!sass-loader"
+        }),
         include: __dirname + '/src',
       },
     ]

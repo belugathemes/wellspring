@@ -32,7 +32,7 @@
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0-rc.2",
+    "webpack": "^2.2.0-rc.3",
     "webpack-livereload-plugin": "^0.9.0"
   },
   "private": true

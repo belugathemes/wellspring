@@ -2,8 +2,8 @@
  *   Webpack Configuration
  * =============================================================================
  */
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var LiveReloadPlugin = require('webpack-livereload-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   cache: true,
@@ -28,7 +28,7 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
           fallbackLoader: "style-loader",
-          loader: "css-loader!sass-loader"
+          loader: "css-loader!postcss-loader!sass-loader"
         }),
         include: __dirname + '/src',
       },

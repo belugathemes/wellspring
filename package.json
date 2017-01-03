@@ -23,6 +23,7 @@
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
+    "autoprefixer": "^6.6.1",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.4",
@@ -30,6 +31,7 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "node-sass": "^4.1.1",
+    "postcss-loader": "^1.2.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.0-rc.3",

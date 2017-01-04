@@ -95,6 +95,9 @@ function wellspring_setup() {
 	add_image_size( 'full-width-image', 1080, null, false );
 	// add featured image size (width is resized, height is cropped)
 	add_image_size( 'featured-image', 1080, 360, array( false, true ) );
+
+	// remove front-end admin bar for logged-in users
+    add_filter( 'show_admin_bar', '__return_false' );
 }
 endif;
 add_action( 'after_setup_theme', 'wellspring_setup' );

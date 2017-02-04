@@ -23,18 +23,18 @@
     "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.0",
+    "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
     "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^2.0.0-rc.0",
-    "node-sass": "^4.3.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3npm",
+    "node-sass": "^4.5.0",
     "postcss-loader": "^1.2.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0",
+    "webpack": "^2.2.1",
     "webpack-livereload-plugin": "^0.10.0"
   },
   "private": true

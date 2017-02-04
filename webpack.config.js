@@ -7,7 +7,7 @@ const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   cache: true,
-  context: __dirname + "/src",
+  context: __dirname + '/src',
   entry: {
     'appshell.css': './appshell/appshell.scss',
     'content.css': './content.scss',
@@ -27,8 +27,8 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader: "css-loader!postcss-loader!sass-loader"
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!postcss-loader!sass-loader'
         }),
         include: __dirname + '/src',
       },

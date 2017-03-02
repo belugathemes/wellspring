@@ -16,7 +16,8 @@ const Home = () => (
       WordPress theme build as a progressive web app.
       Otimized for high&ndash;speed performance and great user experience.
     </p>
-    <Button>Home Page Action</Button>
+    <Button to="/blog" contrast>Latest Posts</Button>
+    <Button to="/about">About Us</Button>
   </article>
 )
 

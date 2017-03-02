@@ -41,9 +41,6 @@ add_action( 'wp_enqueue_scripts', 'wellspring_appshell_assets' );
  * @since 1.0.0
  */
 function wellspring_content_assets() {
-	// wellspring content styles
-	wp_enqueue_style( 'wellspring-content', get_template_directory_uri() . '/dist/content.css', array(), THEME_VERSION );
-
 	// react
 	wp_enqueue_script( 'react', get_template_directory_uri() . '/dist/vendor/react.min.js', array(), '15.3.0', true );
 

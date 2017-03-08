@@ -4,10 +4,10 @@
  */
 
 // fetch polyfill
-import 'whatwg-fetch';
+import 'whatwg-fetch'
 
 // components
-import Excerpt from '../../components/excerpt/excerpt.js';
+import Excerpt from '../../components/excerpt'
 
 class Blog extends React.Component {
   constructor() {

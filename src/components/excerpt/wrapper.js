@@ -11,4 +11,4 @@ const Wrapper = styled.article`
   padding: 1em;
 `;
 
-export default Wrapper
+export default Wrapper;

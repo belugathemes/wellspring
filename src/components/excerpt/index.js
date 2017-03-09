@@ -1,21 +1,23 @@
 /**
- *   Post Excertpt Component
- * =============================================================================
+ *   Post Excertpt
  */
 
+// dependencies
+import React from 'react';
+
 // components
-import Button from '../button/button.js';
-import ExcerptTitle from './title.js'
-import ExcerptWrapper from './wrapper.js'
+import Button from '../button';
+import Title from './title.js';
+import Wrapper from './wrapper.js';
 
 const Excerpt = props => (
-  <ExcerptWrapper>
-    <ExcerptTitle
+  <Wrapper>
+    <Title
       title={props.title}
       url={props.url} />
     <section dangerouslySetInnerHTML={{__html: props.excerpt}} />
     <Button to={props.url}>Read More</Button>
-  </ExcerptWrapper>
-)
+  </Wrapper>
+);
 
-export default Excerpt
+export default Excerpt;

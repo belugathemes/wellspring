@@ -2,9 +2,10 @@
  *   Post Excertpt :: Title
  */
 
-// dependecies
-import { Link } from 'react-router'
-import styled from 'styled-components'
+// dependencies
+import { Link } from 'react-router';
+import React from 'react';
+// import styled from 'styled-components';
 
 const Title = props => (
   <h2>
@@ -12,4 +13,4 @@ const Title = props => (
   </h2>
 )
 
-export default Title
+export default Title;

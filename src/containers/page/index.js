@@ -1,13 +1,10 @@
 /**
- *   Page Container
- * =============================================================================
+ *   Standard Page
  */
 
-// fetch polyfill
+// dependencies
+import React from 'react';
 import 'whatwg-fetch';
-
-// components
-// import Button from '../../components/button/button.js';
 
 class Page extends React.Component {
   constructor(props) {
@@ -45,4 +42,4 @@ class Page extends React.Component {
   }
 }
 
-export default Page
+export default Page;

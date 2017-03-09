@@ -1,13 +1,13 @@
 /**
- *   Blog Page Container
- * =============================================================================
+ *   Blog Page
  */
 
-// fetch polyfill
-import 'whatwg-fetch'
+// dependencies
+import React from 'react';
+import 'whatwg-fetch';
 
 // components
-import Excerpt from '../../components/excerpt'
+import Excerpt from '../../components/excerpt';
 
 class Blog extends React.Component {
   constructor() {
@@ -29,7 +29,6 @@ class Blog extends React.Component {
       .catch((error) => {
         console.error(error);
       });
-
   }
 
   render() {
@@ -50,4 +49,4 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default Blog;

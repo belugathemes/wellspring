@@ -1,12 +1,9 @@
 /**
- *   Button Component
- * =============================================================================
+ *   Button
  */
 
-import { Link } from 'react-router'
-import styled from 'styled-components'
-
-const fontSize = '40px';
+import { Link } from 'react-router';
+import styled from 'styled-components';
 
 const Button = styled(Link)`
   align-items: center;
@@ -16,7 +13,7 @@ const Button = styled(Link)`
   color: #f3f6f8;
   cursor: pointer;
   display: inline-flex;
-  font-size: #{fontSize};
+  font-size: 1em;
   justify-content: center;
   line-height: 1;
   margin: 0.5em 1em 0.5em 0;

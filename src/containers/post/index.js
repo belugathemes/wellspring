@@ -1,13 +1,13 @@
 /**
- *   Single Post Container
- * =============================================================================
+ *   Single Post
  */
 
-// fetch polyfill
+// dependencies
+import React from 'react';
 import 'whatwg-fetch';
 
 // components
-import Button from '../../components/button/button.js';
+import Button from '../../components/button';
 
 class Post extends React.Component {
   constructor(props) {
@@ -49,4 +49,4 @@ class Post extends React.Component {
   }
 }
 
-export default Post
+export default Post;

@@ -1,5 +1,5 @@
 /**
- *   Blog Page
+ * Blog Page
  */
 
 // dependencies

@@ -1,5 +1,5 @@
 /**
- *   Post Excertpt :: Wrapper
+ * Excertpt :: Wrapper
  */
 
 // dependecies

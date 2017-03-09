@@ -1,5 +1,5 @@
 /**
- *   Blog :: Grid Cell
+ * Blog :: Grid Cell
  */
 
 // dependecies

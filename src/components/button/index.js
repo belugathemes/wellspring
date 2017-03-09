@@ -1,5 +1,5 @@
 /**
- *   Button
+ * Button
  */
 
 import { Link } from 'react-router';

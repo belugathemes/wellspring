@@ -1,26 +1,24 @@
 /**
- *   Webpack Configuration
- * =============================================================================
+ * Webpack :: Development
  */
+
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const path = require('path');
 
 module.exports = {
   cache: true,
   context: path.resolve(__dirname, 'src'),
-  entry: {
-    'app.js': './index.js',
-  },
+  entry: './index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name]',
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
       {
         test: /(\.js|\.jsx)$/,
         loader: 'babel-loader',
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, 'src')
       },
     ]
   },

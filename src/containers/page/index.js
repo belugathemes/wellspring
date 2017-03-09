@@ -1,5 +1,5 @@
 /**
- *   Standard Page
+ * Standard Page
  */
 
 // dependencies

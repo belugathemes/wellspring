@@ -1,5 +1,5 @@
 /**
- *   Home Page
+ * Home Page
  */
 
 // dependencies

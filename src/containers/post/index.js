@@ -1,5 +1,5 @@
 /**
- *   Single Post
+ * Single Post
  */
 
 // dependencies

@@ -1,5 +1,5 @@
 /**
- *   Blog :: Grid
+ * Blog :: Grid
  */
 
 // dependecies

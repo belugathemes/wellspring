@@ -1,5 +1,5 @@
 /**
- *   Post Excertpt
+ * Post Excertpt
  */
 
 // dependencies

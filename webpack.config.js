@@ -3,15 +3,16 @@
  * =============================================================================
  */
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+const path = require('path');
 
 module.exports = {
   cache: true,
-  context: __dirname + '/src',
+  context: path.resolve(__dirname, 'src'),
   entry: {
     'app.js': './index.js',
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name]',
   },
   module: {
@@ -19,7 +20,7 @@ module.exports = {
       {
         test: /(\.js|\.jsx)$/,
         loader: 'babel-loader',
-        include: __dirname + '/src',
+        include: path.resolve(__dirname, 'src'),
       },
     ]
   },

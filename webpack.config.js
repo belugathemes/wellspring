@@ -2,14 +2,12 @@
  *   Webpack Configuration
  * =============================================================================
  */
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   cache: true,
   context: __dirname + '/src',
   entry: {
-    'appshell.css': './appshell/appshell.scss',
     'app.js': './index.js',
   },
   output: {
@@ -23,18 +21,9 @@ module.exports = {
         loader: 'babel-loader',
         include: __dirname + '/src',
       },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader!sass-loader'
-        }),
-        include: __dirname + '/src',
-      },
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name]'),
     new LiveReloadPlugin()
   ]
 };

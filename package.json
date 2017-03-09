@@ -13,8 +13,7 @@
   },
   "scripts": {
     "start": "npm run vendor && webpack --watch -d",
-    "dist": "npm run vendor && webpack -p",
-    "vendor": "mkdir -p dist/vendor && cp node_modules/react/dist/react.min.js node_modules/react-dom/dist/react-dom.min.js dist/vendor"
+    "dist": "webpack -p"
   },
   "dependencies": {
     "react": "^15.4.2",

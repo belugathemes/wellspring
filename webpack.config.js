@@ -10,7 +10,7 @@ module.exports = {
   context: __dirname + '/src',
   entry: {
     'appshell.css': './appshell/appshell.scss',
-    'content.js': './content.js',
+    'app.js': './index.js',
   },
   output: {
     path: __dirname + '/dist',

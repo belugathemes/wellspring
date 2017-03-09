@@ -8,6 +8,8 @@ import 'whatwg-fetch';
 
 // components
 import Excerpt from '../../components/excerpt';
+import Grid from './grid.js';
+import GridCell from './grid-cell.js';
 
 class Blog extends React.Component {
   constructor() {
@@ -33,18 +35,18 @@ class Blog extends React.Component {
 
   render() {
     return (
-      <div className="blog">
+      <Grid>
         {this.state.data.map((post) =>
-          <div className="blog__column">
+          <GridCell>
             <Excerpt
               key={post.id}
               title={post.title.rendered}
               url={post.link}
               excerpt={post.excerpt.rendered}
             />
-          </div>
+          </GridCell>
         )}
-      </div>
+      </Grid>
     );
   }
 }

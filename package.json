@@ -15,6 +15,13 @@
     "start": "webpack --watch -d",
     "dist": "webpack -p"
   },
+  "browserslist": [
+    "last 4 Chrome versions",
+    "last 2 Edge versions",
+    "last 4 Firefox versions",
+    "iOS >= 10",
+    "Safari >= 10"
+  ],
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

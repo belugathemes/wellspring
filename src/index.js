@@ -3,6 +3,7 @@
  */
 
 // dependencies
+import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
@@ -12,6 +13,9 @@ import Home from './containers/home';
 import Page from './containers/page';
 import Blog from './containers/blog';
 import Post from './containers/post';
+
+// init offline support
+OfflinePluginRuntime.install();
 
 ReactDOM.render(
   <Router history={browserHistory}>

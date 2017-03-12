@@ -11,6 +11,6 @@ const Title = props => (
   <h2>
     <Link to={props.url}>{props.title}</Link>
   </h2>
-)
+);
 
 export default Title;

@@ -25,10 +25,9 @@
   },
   "rules": {
     "comma-dangle": 0,
-    "key-spacing": 0,
-    "no-console": 0,
-    "quotes": [2, "single", "avoid-escape"],
-    "strict": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
+    "no-confusing-arrow": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-danger": 0,
+    "react/prop-types": 0
+ }
 }

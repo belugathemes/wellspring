@@ -14,9 +14,6 @@ import Page from './containers/page';
 import Blog from './containers/blog';
 import Post from './containers/post';
 
-// init offline support
-OfflinePluginRuntime.install();
-
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={Home} />
@@ -26,3 +23,6 @@ ReactDOM.render(
   </Router>,
   document.getElementById('content')
 );
+
+// init offline support
+OfflinePluginRuntime.install();

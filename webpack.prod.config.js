@@ -24,7 +24,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new OfflinePlugin(),
+    new OfflinePlugin({
+      AppCache: false
+    }),
     new UglifyJSPlugin()
   ]
 };

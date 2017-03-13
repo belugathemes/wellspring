@@ -4,7 +4,6 @@
 
 // dependencies
 import React from 'react';
-import 'whatwg-fetch';
 
 // components
 import Button from '../../components/button';

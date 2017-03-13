@@ -1,5 +1,5 @@
 /**
- *   The Main Application File
+ * The Main Application File
  */
 
 // dependencies

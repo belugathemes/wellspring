@@ -25,6 +25,8 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+    <div id="app"></div>
+
     <!-- Old Navigation -->
     <nav class="oldnav">
 	    <div class="container">
@@ -56,16 +58,13 @@
         </div>
     </nav>
 
-    <!-- Content -->
-    <main id="content"></main>
-
-    <!-- Off-Canvas Toggle Control -->
+    <!-- Old Off-Canvas Toggle Control -->
     <script>
-        var toggle = document.querySelector('.nav__toggle');
+        var toggle = document.querySelector('.oldnav__toggle');
         var body = document.querySelector('body');
         toggle.addEventListener('click', function(e) {
             toggle.classList.toggle('close');
-            body.classList.toggle('nav-opened');
+            body.classList.toggle('oldnav-opened');
             e.preventDefault();
         }, false);
     </script>

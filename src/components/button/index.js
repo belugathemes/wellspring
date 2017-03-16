@@ -27,7 +27,7 @@ const Button = styled(Link)`
 
   &:hover,
   &:focus {
-    background: ${props => props.contrast ? '#ec5840' : '#088ce2'};
+    background: ${props => props.contrast ? color.contrastDark : color.primaryDark};
     color: #fff;
   }
 `;

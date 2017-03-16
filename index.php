@@ -25,17 +25,17 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
+    <!-- Old Navigation -->
+    <nav class="oldnav">
 	    <div class="container">
-            <header class="nav__header">
-                <a class="nav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <header class="oldnav__header">
+                <a class="oldnav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <?php bloginfo( 'name' ); ?>
                 </a>
-                <button class="nav__toggle">
+                <button class="oldnav__toggle">
                     <span>
-                        <div class="nav__toggle__text">Menu</div>
-                        <div class="nav__toggle__icon">
+                        <div class="oldnav__toggle__text">Menu</div>
+                        <div class="oldnav__toggle__icon">
                             <span class="iconbar"></span>
                             <span class="iconbar"></span>
                             <span class="iconbar"></span>
@@ -43,7 +43,7 @@
                     </span>
                 </button>
             </header>
-            <ul class="nav__menu">
+            <ul class="oldnav__menu">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'main_nav',
@@ -57,14 +57,7 @@
     </nav>
 
     <!-- Content -->
-    <main id="content" class="container"></main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            Copyright &copy; <?php echo date('Y'); ?> Radek Stangel. <?php esc_html_e( 'All right reserved.', 'wellspring' ); ?>
-        </div>
-    </footer>
+    <main id="content"></main>
 
     <!-- Off-Canvas Toggle Control -->
     <script>

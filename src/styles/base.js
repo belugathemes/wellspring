@@ -26,7 +26,7 @@ const Base = injectGlobal`
     display: flex;
     flex-direction: column;
     font-family: ${font.family.base};
-    font-size: ${font.size.base};
+    font-size: 1rem;
     font-weight: ${font.weight.normal};
     line-height: ${font.lineHeight};
     margin: 0;
@@ -35,15 +35,15 @@ const Base = injectGlobal`
     text-rendering: optimizeLegibility;
 
     @media (min-width: 545px) {
-      font-size: ${font.size.small};
+      font-size: 1.125rem;
     }
 
     @media (min-width: 685px) {
-      font-size: ${font.size.medium};
+      font-size: 1.25rem;
     }
 
     @media (min-width: 837px) {
-      font-size: ${font.size.large};
+      font-size: 1.375rem;
     }
   }
 

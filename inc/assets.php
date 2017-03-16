@@ -32,16 +32,3 @@ function wellspring_scripts() {
 	wp_enqueue_script( 'wellspring', get_template_directory_uri() . '/dist/app.js', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'wellspring_scripts' );
-
-/**
- * App shell assets
- *
- * WILL BE DEPRACATED WITH STYLE COMPONENTS!!!
- *
- * @since 1.0.0
- */
-function wellspring_appshell_assets() {
-	// wellspring appshell styles
-	wp_enqueue_style( 'wellspring-appshell', get_template_directory_uri() . '/dist/appshell.css', array(), THEME_VERSION );
-}
-add_action( 'wp_enqueue_scripts', 'wellspring_appshell_assets' );

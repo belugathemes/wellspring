@@ -2,15 +2,19 @@
  * Button
  */
 
+// dependencies
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+// styles
+import { color, radius } from '../../styles/theme';
+
 const Button = styled(Link)`
   align-items: center;
-  background: ${props => props.contrast ? '#ea4429' : '#077dc9'};
+  background: ${props => props.contrast ? color.contrast : color.primary};
   border: 1px solid transparent;
-  border-radius: 3px;
-  color: #f3f6f8;
+  border-radius: ${radius};
+  color: ${color.white};
   cursor: pointer;
   display: inline-flex;
   font-size: 1em;

@@ -21,6 +21,7 @@ import Navigation from './components/navigation';
 
 // styles
 import './styles/base';
+import './styles/type';
 
 ReactDOM.render(
   <BrowserRouter>

@@ -16,17 +16,21 @@ import Post from './containers/post';
 
 // components
 import Navigation from './components/navigation';
+import Footer from './components/footer';
+
+// styles
+import './styles/base';
 
 ReactDOM.render(
   <BrowserRouter>
     <div>
       <hr />
       <Navigation />
-      <hr />
       <Route exact path="/" component={Home} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={Post} />
       <Route path="/:slug" component={Page} />
+      <Footer />
     </div>
   </BrowserRouter>,
   document.getElementById('content')

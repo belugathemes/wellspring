@@ -1,7 +1,3 @@
-/**
- * Home Page
- */
-
 // dependencies
 import React from 'react';
 

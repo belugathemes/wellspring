@@ -1,12 +1,8 @@
-/**
- * Base Styles
- */
-
 // dependencies
 import { injectGlobal } from 'styled-components';
 
 // styles
-import { color, font } from './theme';
+import { color, font, media } from './theme';
 
 const Base = injectGlobal`
   html {
@@ -23,30 +19,31 @@ const Base = injectGlobal`
   body {
     background: ${color.white};
     color: ${color.blackLight};
-    display: flex;
-    flex-direction: column;
+    display: flex; /* sticky footer */
+    flex-direction: column; /* sticky footer */
     font-family: ${font.family.base};
     font-size: 1rem;
     font-weight: ${font.weight.normal};
     line-height: ${font.lineHeight};
     margin: 0;
-    min-height: 100vh;
+    min-height: 100vh; /* sticky footer */
     padding: 0;
     text-rendering: optimizeLegibility;
 
-    @media (min-width: 545px) {
+    ${media.small} {
       font-size: 1.125rem;
     }
 
-    @media (min-width: 685px) {
+    ${media.medium} {
       font-size: 1.25rem;
     }
 
-    @media (min-width: 837px) {
+    ${media.large} {
       font-size: 1.375rem;
     }
   }
 
+  /* responsive image */
   img {
     display: inline-block;
     height: auto;

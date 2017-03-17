@@ -1,7 +1,3 @@
-/**
- * Post Excertpt
- */
-
 // dependencies
 import React from 'react';
 

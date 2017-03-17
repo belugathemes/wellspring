@@ -6,15 +6,17 @@ import { color, font, radius } from './theme';
 
 const Type = injectGlobal`
 
+  /* reset */
   h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, pre {
     margin: 0;
     padding: 0;
   }
-
+  /* vertical rhythm */
   p, ul, ol, blockquote, pre, address {
     margin-bottom: ${font.lineHeight}em;
   }
 
+  /* headings */
   h1, h2, h3, h4, h5, h6 {
     color: ${color.black};
     font-family: ${font.family.light};
@@ -29,6 +31,7 @@ const Type = injectGlobal`
   h5 { font-size: 1em; }
   h6 { font-size: 0.75em; }
 
+  /* link */
   a {
     color: ${color.primary};
     text-decoration: none;
@@ -39,6 +42,7 @@ const Type = injectGlobal`
     }
   }
 
+  /* lists */
   ul, ol {
     list-style-position: inside;
     margin-left: 1.5em;
@@ -49,10 +53,9 @@ const Type = injectGlobal`
     }
   }
 
+  /* text */
   b, strong { font-weight: ${font.weight.bold}; }
-
   small { font-size: 80%; }
-
   sub, sup {
     font-size: 75%;
     line-height: 0;
@@ -62,6 +65,7 @@ const Type = injectGlobal`
   sub { bottom: -0.25em; }
   sup { top: -0.5em; }
 
+  /* quotes */
   blockquote {
     color: ${color.grayDark};
     border-left: 3px solid ${color.gray};
@@ -72,6 +76,7 @@ const Type = injectGlobal`
     }
   }
 
+  /* preformatted, code */
   code, kbd, pre, samp {
     background: ${color.grayLight};
     border-radius: ${radius};

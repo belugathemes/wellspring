@@ -1,7 +1,3 @@
-/**
- * Button
- */
-
 // dependencies
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -25,8 +21,7 @@ const Button = styled(Link)`
   transition: background 0.25s ease-out, color 0.25s ease-out;
   -webkit-appearance: none;
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     background: ${props => props.contrast ? color.contrastDark : color.primaryDark};
     color: #fff;
   }

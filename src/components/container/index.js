@@ -1,6 +1,9 @@
 // dependencies
 import styled from 'styled-components';
 
+// styles
+import { media } from '../../styles/theme';
+
 const Container = styled.div`
   padding: 0 1em;
   margin: 0 auto;
@@ -8,7 +11,7 @@ const Container = styled.div`
   min-width: 320px;
   width: 100%;
 
-  @media (min-width: 545px) {
+  ${media.small} {
     padding: 0 2em;
   }
 `;

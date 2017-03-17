@@ -1,7 +1,3 @@
-/**
- * Excertpt :: Wrapper
- */
-
 // dependecies
 import styled from 'styled-components';
 

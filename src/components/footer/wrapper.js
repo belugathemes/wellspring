@@ -9,7 +9,7 @@ const Footer = styled.footer`
   color: ${color.white};
   font-size: 0.875rem;
   line-height: 1.4;
-  z-index: 1;
+  z-index: 1; /* above off-canvas */
   padding: 0.75em 0;
 
   @media (min-width: 685px) {

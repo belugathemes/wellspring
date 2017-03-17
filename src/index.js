@@ -1,7 +1,3 @@
-/**
- * The Main Application File
- */
-
 // dependencies
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import React from 'react';

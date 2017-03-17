@@ -1,5 +1,6 @@
 // theme settings
 
+// color palette
 export const color = {
   primary: '#077dc9',
   contrast: '#ea4429',
@@ -14,6 +15,7 @@ export const color = {
   grayLight: '#e1e6e9'     // mix(#eaeaea, primary, 96%)
 };
 
+// font and text parameters
 export const font = {
   family: {
     base: '"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif',
@@ -28,4 +30,12 @@ export const font = {
   lineHeight: 1.5,
 };
 
+// media queries
+export const media = {
+  small: '@media (min-width: 34.0625em)',  // 545px
+  medium: '@media (min-width: 42.8125em)', // 685px
+  large: '@media (min-width: 52.3125em)',  // 837px
+};
+
+// global radius
 export const radius = '3px';

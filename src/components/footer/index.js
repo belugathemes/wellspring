@@ -2,14 +2,14 @@
 import React from 'react';
 
 // components
-import Container from '../container';
+import Box from '../box';
 import Wrapper from './wrapper';
 
 const Footer = () => (
   <Wrapper>
-    <Container>
+    <Box>
       Copyright &copy; 2016 Radek Stangel. All rights reserved.
-    </Container>
+    </Box>
   </Wrapper>
 );
 

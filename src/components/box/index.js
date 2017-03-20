@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // styles
 import { media } from '../../styles/theme';
 
-const Container = styled.div`
+const Box = styled.div`
   padding: 0 1em;
   margin: 0 auto;
   max-width: 968px;
@@ -16,4 +16,4 @@ const Container = styled.div`
   }
 `;
 
-export default Container;
+export default Box;

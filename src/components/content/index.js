@@ -2,12 +2,12 @@
 import styled from 'styled-components';
 
 // components
-import Container from '../container';
+import Box from '../box';
 
 // styles
 import { color } from '../../styles/theme';
 
-const Content = styled(Container)`
+const Content = styled(Box)`
   background: ${color.white};
   flex: 1 0 auto; /* sticky footer */
   padding-bottom: 1.5em;

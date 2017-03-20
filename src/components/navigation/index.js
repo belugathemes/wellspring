@@ -2,24 +2,25 @@
 import React from 'react';
 
 // components
-import Container from '../container';
 import Header from './header';
 import Menu from './menu';
+import MenuList from './menu-list';
+import NavBox from './navbox';
 import NavLink from './navlink';
 import Wrapper from './wrapper';
 
 const Navigation = () => (
   <Wrapper>
-    <Container>
+    <NavBox>
       <Header>
         Wellspring
       </Header>
       <Menu>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/blog">Blog</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
+        <MenuList><NavLink to="/">Home</NavLink></MenuList>
+        <MenuList><NavLink to="/blog">Blog</NavLink></MenuList>
+        <MenuList><NavLink to="/about">About</NavLink></MenuList>
       </Menu>
-    </Container>
+    </NavBox>
   </Wrapper>
 );
 

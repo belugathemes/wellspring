@@ -41,9 +41,9 @@ export const media = {
 // navigation
 export const nav = {
   offcanvasWidth: '14rem',  // 224px
-  offcanvasBorder: '1px solid rgba(#fff, 0.15)',
+  offcanvasBorder: '1px solid rgba(255, 255, 255, 0.15)',
   topbarHeight: '3.125rem', // 50px
-  topbarBorder: '1px solid rgba(#fff, 0.2)',
+  topbarBorder: '1px solid rgba(255, 255, 255, 0.2)',
   transitionTime: '0.35s',
 };
 

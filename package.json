@@ -16,11 +16,10 @@
     "dist": "webpack -p --config webpack.prod.config.js"
   },
   "browserslist": [
-    "last 4 Chrome versions",
-    "last 2 Edge versions",
-    "last 4 Firefox versions",
-    "iOS >= 10",
-    "Safari >= 10"
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "iOS >= 10.3",
+    "Safari >= 10.1"
   ],
   "dependencies": {
     "offline-plugin": "^4.6.2",
@@ -32,7 +31,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.2.2",
     "babel-preset-react": "^6.22.0",
@@ -40,10 +39,10 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react": "^6.10.3",
     "uglify-js": "mishoo/UglifyJS2#harmony",
-    "uglifyjs-webpack-plugin": "^0.3.0",
-    "webpack": "^2.2.1",
+    "uglifyjs-webpack-plugin": "^0.4.0",
+    "webpack": "^2.3.2",
     "webpack-livereload-plugin": "^0.10.0"
   },
   "private": true

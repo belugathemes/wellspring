@@ -5,15 +5,18 @@ import styled from 'styled-components';
 import Box from '../box';
 
 // styles
-import { color } from '../../styles/theme';
+import { color, media } from '../../styles/theme';
 
 const Content = styled(Box)`
   background: ${color.white};
   flex: 1 0 auto; /* sticky footer */
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
+  padding: 1.5em 1em;
   transition: 0.35s; /* off-canvas transition */
   z-index: 1; /* above off-canvas */
+
+  ${media.small} {
+    padding: 1.5em 2em;
+  }
 
   /* content overlay when nav is opened */
   &:after {

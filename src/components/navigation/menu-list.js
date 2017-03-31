@@ -14,7 +14,6 @@ const MenuList = styled.li`
   ${media.medium} {
     border-bottom: 0; /* remove off-canvas border */
     border-right: ${nav.topbarBorder};
-
   }
 `;
 

@@ -30,9 +30,8 @@ class BlogContainer extends React.Component {
     return (
       <Grid>
         {this.state.data.map(post =>
-          <GridCell>
+          <GridCell key={post.id}>
             <Excerpt
-              key={post.id}
               title={post.title.rendered}
               url={post.link}
               excerpt={post.excerpt.rendered}

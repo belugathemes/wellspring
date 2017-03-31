@@ -31,15 +31,15 @@ const Base = injectGlobal`
     text-rendering: optimizeLegibility;
 
     ${media.small} {
-      font-size: 1.125rem;
+      font-size: ${18 / 16}rem;
     }
 
     ${media.medium} {
-      font-size: 1.25rem;
+      font-size: ${20 / 16}rem;
     }
 
     ${media.large} {
-      font-size: 1.375rem;
+      font-size: ${22 / 16}rem;
     }
   }
 

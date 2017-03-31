@@ -14,7 +14,7 @@ class PageContainer extends React.Component {
 
   componentDidMount() {
     // fetch latest posts
-    const dataURL = `//${window.location.hostname}/wp-json/wp/v2/pages/?slug=${this.props.match.params.slug}`;
+    const dataURL = `//${window.location.hostname}/wp-json/wp/v2/pages?slug=${this.props.match.params.slug}`;
     fetch(dataURL)
       .then(response => response.json())
       .then((responseData) => {

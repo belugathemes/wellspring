@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import { media } from '../../styles/theme';
 
 const Grid = styled.div`
-  margin: -0.5em;
 
   ${media.medium} {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 50% 50%;
   }
 `;
 

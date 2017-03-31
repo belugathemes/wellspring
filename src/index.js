@@ -2,7 +2,7 @@
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // containers
 import BlogContainer from './containers/blog';
@@ -24,10 +24,12 @@ ReactDOM.render(
     <div>
       <Navigation />
       <Content>
-        <Route exact path="/" component={HomeContainer} />
-        <Route path="/blog" component={BlogContainer} />
-        <Route path="/blog/:slug" component={PostContainer} />
-        <Route path="/:slug" component={PageContainer} />
+        <Switch>
+          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/blog" component={BlogContainer} />
+          <Route path="/blog/:slug" component={PostContainer} />
+          <Route path="/:slug" component={PageContainer} />
+        </Switch>
       </Content>
       <Footer />
     </div>

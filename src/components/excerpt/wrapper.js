@@ -10,7 +10,8 @@ const Wrapper = styled.article`
   padding: 1em;
 
   ${media.medium} {
-    min-height: 24em;
+    font-size: ${18 / 16}rem;
+    min-height: 22em;
   }
 `;
 

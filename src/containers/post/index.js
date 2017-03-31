@@ -1,11 +1,10 @@
 // dependencies
 import React from 'react';
-import 'whatwg-fetch';
 
 // components
 import Button from '../../components/button';
 
-class Post extends React.Component {
+class PostContainer extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -43,4 +42,4 @@ class Post extends React.Component {
   }
 }
 
-export default Post;
+export default PostContainer;

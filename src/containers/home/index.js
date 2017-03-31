@@ -4,7 +4,7 @@ import React from 'react';
 // components
 import Button from '../../components/button';
 
-const Home = () => (
+const HomeContainer = () => (
   <article className="home">
     <h1>Wellspring</h1>
     <p>
@@ -16,4 +16,4 @@ const Home = () => (
   </article>
 );
 
-export default Home;
+export default HomeContainer;

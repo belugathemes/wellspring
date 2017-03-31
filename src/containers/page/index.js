@@ -1,8 +1,10 @@
 // dependencies
 import React from 'react';
-import 'whatwg-fetch';
 
-class Page extends React.Component {
+// components
+import Page from '../../components/page';
+
+class PageContainer extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -26,14 +28,14 @@ class Page extends React.Component {
     return (
       <div>
         {this.state.data.map(page =>
-          <article className="page">
-            <h1 className="page__title" dangerouslySetInnerHTML={{ __html: page.title.rendered }} />
-            <section className="page__entry" dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
-          </article>
+          <Page
+            title={page.title.rendered}
+            content={page.content.rendered}
+          />
         )}
       </div>
     );
   }
 }
 
-export default Page;
+export default PageContainer;

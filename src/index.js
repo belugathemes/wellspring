@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // containers
-import Blog from './containers/blog';
-import Home from './containers/home';
-import Page from './containers/page';
-import Post from './containers/post';
+import BlogContainer from './containers/blog';
+import HomeContainer from './containers/home';
+import PageContainer from './containers/page';
+import PostContainer from './containers/post';
 
 // components
 import Content from './components/content';
@@ -24,10 +24,10 @@ ReactDOM.render(
     <div>
       <Navigation />
       <Content>
-        <Route exact path="/" component={Home} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/blog/:slug" component={Post} />
-        <Route path="/:slug" component={Page} />
+        <Route exact path="/" component={HomeContainer} />
+        <Route path="/blog" component={BlogContainer} />
+        <Route path="/blog/:slug" component={PostContainer} />
+        <Route path="/:slug" component={PageContainer} />
       </Content>
       <Footer />
     </div>

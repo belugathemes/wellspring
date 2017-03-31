@@ -1,13 +1,12 @@
 // dependencies
 import React from 'react';
-import 'whatwg-fetch';
 
 // components
 import Excerpt from '../../components/excerpt';
 import Grid from './grid';
 import GridCell from './grid-cell';
 
-class Blog extends React.Component {
+class BlogContainer extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -45,4 +44,4 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog;
+export default BlogContainer;

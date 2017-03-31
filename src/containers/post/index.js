@@ -2,7 +2,7 @@
 import React from 'react';
 
 // components
-import Button from '../../components/button';
+import Post from '../../components/post';
 
 class PostContainer extends React.Component {
   constructor() {
@@ -14,7 +14,7 @@ class PostContainer extends React.Component {
 
   componentDidMount() {
     // fetch latest posts
-    const dataURL = `//${window.location.hostname}/wp-json/wp/v2/posts/?slug=${this.props.params.slug}`;
+    const dataURL = `//${window.location.hostname}/wp-json/wp/v2/posts?slug=${this.props.match.params.slug}`;
     fetch(dataURL)
       .then(response => response.json())
       .then((responseData) => {
@@ -28,15 +28,12 @@ class PostContainer extends React.Component {
     return (
       <div>
         {this.state.data.map(post =>
-          <article className="post">
-            <h1 className="post__title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-            <section className="post__entry" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-          </article>
+          <Post
+            key={post.id}
+            title={post.title.rendered}
+            content={post.content.rendered}
+          />
         )}
-        <section className="post__nav">
-          <Button>Previous Post</Button>
-          <Button>Next Post</Button>
-        </section>
       </div>
     );
   }

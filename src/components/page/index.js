@@ -2,12 +2,12 @@
 import React from 'react';
 
 // components
-import PageContent from './page-content';
+import Entry from '../entry';
 
 const Page = props => (
   <article>
-    <h2 dangerouslySetInnerHTML={{ __html: props.title }} />
-    <PageContent dangerouslySetInnerHTML={{ __html: props.content }} />
+    <h1 dangerouslySetInnerHTML={{ __html: props.title }} />
+    <Entry dangerouslySetInnerHTML={{ __html: props.content }} />
   </article>
 );
 

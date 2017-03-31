@@ -33,7 +33,7 @@ class BlogContainer extends React.Component {
           <GridCell key={post.id}>
             <Excerpt
               title={post.title.rendered}
-              url={post.link}
+              url={post.slug}
               excerpt={post.excerpt.rendered}
             />
           </GridCell>

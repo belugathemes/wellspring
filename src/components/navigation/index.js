@@ -8,6 +8,7 @@ import MenuLink from './menu-link';
 import MenuList from './menu-list';
 import NavBox from './navbox';
 import TitleLink from './title-link';
+import Toggle from './toggle';
 import Wrapper from './wrapper';
 
 const Navigation = () => (
@@ -15,6 +16,9 @@ const Navigation = () => (
     <NavBox>
       <Header>
         <TitleLink to="/">Wellspring</TitleLink>
+        <Toggle>
+          Menu
+        </Toggle>
       </Header>
       <Menu>
         <MenuList><MenuLink to="/">Home</MenuLink></MenuList>

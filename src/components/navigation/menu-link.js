@@ -5,10 +5,10 @@ import styled from 'styled-components';
 // styles
 import { color, media, nav } from '../../styles/theme';
 
-const NavLink = styled(Link)`
+const MenuLink = styled(Link)`
   color: ${color.white};
   display: block;
-  font-size: 1.125rem; /* 18px */
+  font-size: ${18 / 16}rem;
   line-height: ${nav.topbarHeight};
 
   &:hover {
@@ -20,4 +20,4 @@ const NavLink = styled(Link)`
   }
 `;
 
-export default NavLink;
+export default MenuLink;

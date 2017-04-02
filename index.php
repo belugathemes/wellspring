@@ -26,48 +26,6 @@
 </head>
 <body>
     <div id="app"></div>
-
-    <!-- Old Navigation -->
-    <nav class="oldnav">
-	    <div class="container">
-            <header class="oldnav__header">
-                <a class="oldnav__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <?php bloginfo( 'name' ); ?>
-                </a>
-                <button class="oldnav__toggle">
-                    <span>
-                        <div class="oldnav__toggle__text">Menu</div>
-                        <div class="oldnav__toggle__icon">
-                            <span class="iconbar"></span>
-                            <span class="iconbar"></span>
-                            <span class="iconbar"></span>
-                        </div>
-                    </span>
-                </button>
-            </header>
-            <ul class="oldnav__menu">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'main_nav',
-                    'depth'          => 1,
-                    'container'		 => 0,
-                    'items_wrap'     => '%3$s',
-                ));
-                ?>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Old Off-Canvas Toggle Control -->
-    <script>
-        var toggle = document.querySelector('.oldnav__toggle');
-        var body = document.querySelector('body');
-        toggle.addEventListener('click', function(e) {
-            toggle.classList.toggle('close');
-            body.classList.toggle('oldnav-opened');
-            e.preventDefault();
-        }, false);
-    </script>
     <?php wp_footer() ?>
 </body>
 </html>

@@ -14,17 +14,17 @@ import ToggleIconBar from './toggle-icon-bar';
 import ToggleText from './toggle-text';
 import Wrapper from './wrapper';
 
-const Navigation = () => (
+const Navigation = props => (
   <Wrapper>
     <NavBox>
       <Header>
         <TitleLink to="/">Wellspring</TitleLink>
-        <Toggle>
+        <Toggle onClick={props.toggleMenu}>
           <ToggleText>Menu</ToggleText>
           <ToggleIcon>
-            <ToggleIconBar />
-            <ToggleIconBar />
-            <ToggleIconBar />
+            <ToggleIconBar navIsOpen={props.navIsOpen} />
+            <ToggleIconBar navIsOpen={props.navIsOpen} />
+            <ToggleIconBar navIsOpen={props.navIsOpen} />
           </ToggleIcon>
         </Toggle>
       </Header>

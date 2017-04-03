@@ -13,13 +13,14 @@ import Content from './components/content';
 import Footer from './components/footer';
 import Navigation from './components/navigation';
 
-// styles
+// global styles
 import './styles/base';
 import './styles/type';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.toggleNav = this.toggleNav.bind(this);
     this.state = { navIsOpen: false };
   }
 
@@ -32,12 +33,10 @@ class App extends React.Component {
   // }, false);
 
   componentDidMount() {
-    window.addEventListener('click', this.toggleMenu);
+    window.addEventListener('click', this.toggleNav);
   }
 
-  toggleMenu(e) {
-    e.preventDefault();
-    console.log('TOGGLED');
+  toggleNav() {
     this.setState({
       navIsOpen: !this.state.navIsOpen
     });

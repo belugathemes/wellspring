@@ -1,0 +1,66 @@
+// dependencies
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+// containers
+import BlogContainer from './containers/blog';
+import HomeContainer from './containers/home';
+import PageContainer from './containers/page';
+import PostContainer from './containers/post';
+
+// components
+import Content from './components/content';
+import Footer from './components/footer';
+import Navigation from './components/navigation';
+
+// styles
+import './styles/base';
+import './styles/type';
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { navIsOpen: false };
+  }
+
+  // var toggle = document.querySelector('.oldnav__toggle');
+  // var body = document.querySelector('body');
+  // toggle.addEventListener('click', function(e) {
+  //     toggle.classList.toggle('close');
+  //     body.classList.toggle('oldnav-opened');
+  //     e.preventDefault();
+  // }, false);
+
+  componentDidMount() {
+    window.addEventListener('click', this.toggleMenu);
+  }
+
+  toggleMenu(e) {
+    e.preventDefault();
+    console.log('TOGGLED');
+    this.setState({
+      navIsOpen: !this.state.navIsOpen
+    });
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Navigation navIsOpen={this.state.navIsOpen} />
+          <Content navIsOpen={this.state.navIsOpen}>
+            <Switch>
+              <Route exact path="/" component={HomeContainer} />
+              <Route exact path="/blog" component={BlogContainer} />
+              <Route path="/blog/:slug" component={PostContainer} />
+              <Route path="/:slug" component={PageContainer} />
+            </Switch>
+          </Content>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+
+export default App;

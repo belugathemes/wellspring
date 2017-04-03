@@ -9,6 +9,9 @@ import MenuList from './menu-list';
 import NavBox from './navbox';
 import TitleLink from './title-link';
 import Toggle from './toggle';
+import ToggleIcon from './toggle-icon';
+import ToggleIconBar from './toggle-icon-bar';
+import ToggleText from './toggle-text';
 import Wrapper from './wrapper';
 
 const Navigation = () => (
@@ -17,7 +20,12 @@ const Navigation = () => (
       <Header>
         <TitleLink to="/">Wellspring</TitleLink>
         <Toggle>
-          Menu
+          <ToggleText>Menu</ToggleText>
+          <ToggleIcon>
+            <ToggleIconBar />
+            <ToggleIconBar />
+            <ToggleIconBar />
+          </ToggleIcon>
         </Toggle>
       </Header>
       <Menu>

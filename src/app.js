@@ -34,7 +34,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation navIsOpen={this.state.navIsOpen} onClick={() => this.toggleNav()} />
+          <Navigation navIsOpen={this.state.navIsOpen} onClick={this.toggleNav} />
           <Content navIsOpen={this.state.navIsOpen}>
             <Switch>
               <Route exact path="/" component={HomeContainer} />

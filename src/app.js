@@ -18,8 +18,8 @@ import './styles/base';
 import './styles/type';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.toggleNav = this.toggleNav.bind(this);
     this.state = { navIsOpen: false };
   }
@@ -34,8 +34,8 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation navIsOpen={this.state.navIsOpen} onClick={this.toggleNav} />
-          <Content navIsOpen={this.state.navIsOpen}>
+          <Navigation onClick={this.toggleNav} navIsOpen={this.state.navIsOpen} />
+          <Content onClick={this.state.navIsOpen && this.toggleNav} navIsOpen={this.state.navIsOpen}>
             <Switch>
               <Route exact path="/" component={HomeContainer} />
               <Route exact path="/blog" component={BlogContainer} />

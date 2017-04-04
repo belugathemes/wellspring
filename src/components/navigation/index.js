@@ -29,9 +29,9 @@ const Navigation = props => (
         </Toggle>
       </Header>
       <Menu>
-        <MenuList><MenuLink to="/">Home</MenuLink></MenuList>
-        <MenuList><MenuLink to="/blog">Blog</MenuLink></MenuList>
-        <MenuList><MenuLink to="/about">About</MenuLink></MenuList>
+        <MenuList><MenuLink to="/" onClick={props.onClick}>Home</MenuLink></MenuList>
+        <MenuList><MenuLink to="/blog" onClick={props.onClick}>Blog</MenuLink></MenuList>
+        <MenuList><MenuLink to="/about" onClick={props.onClick}>About</MenuLink></MenuList>
       </Menu>
     </NavBox>
   </Wrapper>

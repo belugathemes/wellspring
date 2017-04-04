@@ -2,12 +2,12 @@
 import styled from 'styled-components';
 
 // components
-import MenuLink from './menu-link';
+import NavLink from './nav-link';
 
 // styles
 import { font, media } from '../../styles/theme';
 
-const TitleLink = styled(MenuLink)`
+const TitleLink = styled(NavLink)`
   font-size: ${25 / 16}rem;
   font-weight: ${font.weight.bold};
   margin-right: 2rem;

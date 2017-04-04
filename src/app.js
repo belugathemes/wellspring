@@ -24,18 +24,6 @@ class App extends React.Component {
     this.state = { navIsOpen: false };
   }
 
-  // var toggle = document.querySelector('.oldnav__toggle');
-  // var body = document.querySelector('body');
-  // toggle.addEventListener('click', function(e) {
-  //     toggle.classList.toggle('close');
-  //     body.classList.toggle('oldnav-opened');
-  //     e.preventDefault();
-  // }, false);
-
-  componentDidMount() {
-    window.addEventListener('click', this.toggleNav);
-  }
-
   toggleNav() {
     this.setState({
       navIsOpen: !this.state.navIsOpen
@@ -46,7 +34,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Navigation navIsOpen={this.state.navIsOpen} />
+          <Navigation navIsOpen={this.state.navIsOpen} onClick={() => this.toggleNav()} />
           <Content navIsOpen={this.state.navIsOpen}>
             <Switch>
               <Route exact path="/" component={HomeContainer} />

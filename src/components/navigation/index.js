@@ -19,7 +19,7 @@ const Navigation = props => (
     <NavBox>
       <Header>
         <TitleLink to="/">Wellspring</TitleLink>
-        <Toggle onClick={props.toggleMenu}>
+        <Toggle onClick={props.onClick}>
           <ToggleText>Menu</ToggleText>
           <ToggleIcon>
             <ToggleIconBar navIsOpen={props.navIsOpen} />

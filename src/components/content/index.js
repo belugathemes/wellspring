@@ -11,6 +11,7 @@ const Content = styled(Box)`
   background: ${color.white};
   flex: 1 0 auto; /* sticky footer */
   padding: 1.5em 1em;
+  position: relative; /* to make z-index work */
   transform: ${props => props.navIsOpen ? `translate3d(-${nav.offcanvasWidth}, 0, 0)` : 'none'};
   transition: 0.35s; /* off-canvas transition */
   z-index: 1; /* above off-canvas */

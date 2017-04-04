@@ -28,6 +28,8 @@ class App extends React.Component {
     this.setState({
       navIsOpen: !this.state.navIsOpen
     });
+    // no scrolling when off-canvas is open
+    document.body.style.overflow = this.state.navIsOpen ? null : 'hidden';
   }
 
   render() {

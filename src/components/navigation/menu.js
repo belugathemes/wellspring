@@ -21,7 +21,7 @@ const Menu = styled.ul`
 
     /* topbar on desktop */
     ${media.medium} {
-      background: ${color.primaryDark};
+      background: ${color.blackPrimary};
       display: flex;
       height: ${nav.topbarHeight};
       padding: 0;

@@ -14,6 +14,11 @@ const MenuList = styled.li`
   ${media.medium} {
     border-bottom: 0; /* remove off-canvas border */
     border-right: ${nav.topbarBorder};
+
+    &:first-child {
+     border-left: ${nav.topbarBorder};
+     border-top: 0; /* remove off-canvas border */
+    }
   }
 `;
 

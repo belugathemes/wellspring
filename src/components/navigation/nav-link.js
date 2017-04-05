@@ -11,7 +11,7 @@ const NavLink = styled(Link)`
   font-size: ${18 / 16}rem;
   line-height: ${nav.topbarHeight};
 
-  &:hover {
+  &:active, &:focus, &:hover {
     color: #fff;
   }
 

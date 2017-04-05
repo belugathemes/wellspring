@@ -18,8 +18,10 @@ const Navigation = props => (
   <Wrapper>
     <NavBox>
       <Header>
-        <TitleLink to="/">Wellspring</TitleLink>
-        <Toggle onClick={props.onClick}>
+        <TitleLink to="/" onClick={props.navIsOpen && props.closeNav}>
+          Wellspring
+        </TitleLink>
+        <Toggle onClick={props.toggleNav}>
           <ToggleText>Menu</ToggleText>
           <ToggleIcon>
             <ToggleIconBar navIsOpen={props.navIsOpen} />
@@ -29,9 +31,15 @@ const Navigation = props => (
         </Toggle>
       </Header>
       <Menu>
-        <MenuList><MenuLink to="/" onClick={props.onClick}>Home</MenuLink></MenuList>
-        <MenuList><MenuLink to="/blog" onClick={props.onClick}>Blog</MenuLink></MenuList>
-        <MenuList><MenuLink to="/about" onClick={props.onClick}>About</MenuLink></MenuList>
+        <MenuList>
+          <MenuLink to="/" onClick={props.navIsOpen && props.closeNav}>Home</MenuLink>
+        </MenuList>
+        <MenuList>
+          <MenuLink to="/blog" onClick={props.navIsOpen && props.closeNav}>Blog</MenuLink>
+        </MenuList>
+        <MenuList>
+          <MenuLink to="/about" onClick={props.navIsOpen && props.closeNav}>About</MenuLink>
+        </MenuList>
       </Menu>
     </NavBox>
   </Wrapper>

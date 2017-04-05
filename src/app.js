@@ -21,23 +21,34 @@ class App extends React.Component {
   constructor() {
     super();
     this.toggleNav = this.toggleNav.bind(this);
+    this.closeNav = this.closeNav.bind(this);
     this.state = { navIsOpen: false };
   }
 
   toggleNav() {
-    this.setState({
-      navIsOpen: !this.state.navIsOpen
-    });
+    this.setState({ navIsOpen: !this.state.navIsOpen });
     // no scrolling when off-canvas is open
     document.body.style.overflow = this.state.navIsOpen ? null : 'hidden';
+  }
+
+  closeNav() {
+    this.setState({ navIsOpen: false });
+    document.body.style.overflow = null;
   }
 
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Navigation onClick={this.toggleNav} navIsOpen={this.state.navIsOpen} />
-          <Content onClick={this.state.navIsOpen && this.toggleNav} navIsOpen={this.state.navIsOpen}>
+          <Navigation
+            toggleNav={this.toggleNav}
+            closeNav={this.closeNav}
+            navIsOpen={this.state.navIsOpen}
+          />
+          <Content
+            onClick={this.state.navIsOpen && this.closeNav}
+            navIsOpen={this.state.navIsOpen}
+          >
             <Switch>
               <Route exact path="/" component={HomeContainer} />
               <Route exact path="/blog" component={BlogContainer} />

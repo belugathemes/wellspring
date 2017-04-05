@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 // styles
-import { color } from '../../styles/theme';
+import { color, media } from '../../styles/theme';
 
 const Footer = styled.footer`
   background: ${color.blackPrimary};
@@ -13,7 +13,7 @@ const Footer = styled.footer`
   z-index: 1; /* above off-canvas */
   padding: 0.75em 0;
 
-  @media (min-width: 685px) {
+  ${media.medium} {
     font-size: 0.9375rem;
   }
 `;

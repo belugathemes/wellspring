@@ -19,14 +19,11 @@ const Base = injectGlobal`
   body {
     background: ${color.white};
     color: ${color.blackLight};
-    display: flex; /* sticky footer */
-    flex-direction: column; /* sticky footer */
     font-family: ${font.family.base};
     font-size: 1rem;
     font-weight: ${font.weight.normal};
     line-height: ${font.lineHeight};
     margin: 0;
-    min-height: 100vh; /* sticky footer */
     padding: 0;
     text-rendering: optimizeLegibility;
 
@@ -41,6 +38,13 @@ const Base = injectGlobal`
     ${media.large} {
       font-size: ${22 / 16}rem;
     }
+  }
+
+  /* sticky footer */
+  #app > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
   /* responsive image */

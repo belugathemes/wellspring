@@ -12,7 +12,7 @@ const Toggle = styled.button`
   cursor: context-menu;
   display: flex;
   font-size: 1rem;
-  margin: ${7 / 16}rem ${8 / 16}rem;
+  margin: 0.5rem 0;
 
   &:focus {
     outline: 0;

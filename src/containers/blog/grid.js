@@ -9,7 +9,7 @@ const Grid = styled.div`
   ${media.medium} {
     display: grid;
     grid-column-gap: 1em;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
   }
 `;
 

@@ -32,7 +32,10 @@ const Navigation = props => (
       </Header>
       <Menu>
         <MenuList>
-          <MenuLink to="/" onClick={props.navIsOpen && props.closeNav}>Home</MenuLink>
+          <MenuLink to="/features" onClick={props.navIsOpen && props.closeNav}>Features</MenuLink>
+        </MenuList>
+        <MenuList>
+          <MenuLink to="/typography" onClick={props.navIsOpen && props.closeNav}>Typography</MenuLink>
         </MenuList>
         <MenuList>
           <MenuLink to="/blog" onClick={props.navIsOpen && props.closeNav}>Blog</MenuLink>

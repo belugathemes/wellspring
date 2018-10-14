@@ -1,4 +1,4 @@
-# Wellspring [DEPRECATED]
+# Wellspring [ARCHIVED]
 
 WordPress progressive web app theme based on React.js and WordPress REST API
 
